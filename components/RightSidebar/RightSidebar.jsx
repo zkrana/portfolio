@@ -3,7 +3,7 @@ import React from 'react'
 export default function 
 () {
   return (
-    <div className='flex-shrink-0 h-screen w-[108px] bg-[#FAFAFA] shadow-sm px-[39px] pt-[50px] fixed right-0 top-0'>
+    <div className='flex-shrink-0 h-full w-[108px] bg-[#FAFAFA] shadow-sm px-[39px] pt-[50px] fixed right-0 top-0'>
         <div id='dark-mode' className='cursor-pointer flex justify-center items-center'>
             <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_2_6707)">

@@ -5,16 +5,16 @@ import { faFacebook, faInstagram, faTwitter, faGithub, faYoutube } from '@fortaw
 
 export default function PersonalIntro() {
   return (
-        <div className=' border-b border-[#F0F0F6] pb-6'>
+        <div className=' border-b border-[#F0F0F6] pb-4'>
             <div>
                 <Image src={pImage} alt='Portfolio Image' className='mx-auto' />
-                <span className='block text-center text-lg text-text font-semibold capitalize mt-8'> Ziaul Kabir </span>
+                <span className='block text-center text-lg text-text font-semibold capitalize mt-3'> Ziaul Kabir </span>
                 <span className='block text-center text-[15px] leading-5 text-sub-head capitalize'> Front-end Developer </span>
             </div>
 
             <div className="social-media flex justify-center gap-[15px] mt-4">
                 <a href="#" className='leftSocial'>
-                    <FontAwesomeIcon icon={faFacebook} width={14} height={14} />
+                    <FontAwesomeIcon icon={faFacebook} width={14} height={14} className='text-teal' />
                 </a>
                 <a href="#" className='leftSocial'>
                     <FontAwesomeIcon icon={faInstagram} width={14} height={14} />
