@@ -1,16 +1,18 @@
 import React from 'react'
+import Content from '../Content'
+
 
 export default function Service() {
   return (
-    <div className='service mt-[126px]'>
-        <h2 className='title text-[32px] leading-[45px] text-text font-[700] text-center capitalize'> my services </h2>
-        <p className='sec-desc max-w-md mx-auto text-[15px] leading-[25px] text-sub-head text-center pt-[25px] '>
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum
-        </p>
+    <div className='service'>
+        <Content 
+            title='my services'
+            description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
+        />
 
         {/* Service Wrapper */}
         <div className='service-wrapper flex gap-5 justify-between flex-wrap mt-[50px]'>
-            <div className="service-item w-[32%] px-[76px] pt-[28px] pb-[42px] bg-white flex-shrink-0 text-center ">
+            <div className="service-item">
                 <div className='mx-auto'>
                  <svg 
                     className='mx-auto'
@@ -25,7 +27,7 @@ export default function Service() {
                 <span className='s-desc text-[15px] leading-[24px] text-sub-head mt-[15px] capitalize'> blog, e-commerce </span>
             </div>
 
-            <div className="service-item w-[32%] px-[76px] pt-[28px] pb-[42px] bg-white flex-shrink-0 text-center ">
+            <div className="service-item">
                 <div className='mx-auto'>
                  <svg
                     className='mx-auto' 
@@ -50,7 +52,7 @@ export default function Service() {
                 <span className='s-desc text-[15px] leading-[24px] text-sub-head mt-[15px] capitalize'> Mobile app and website design </span>
             </div>
 
-            <div className="service-item w-[32%] px-[76px] pt-[28px] pb-[42px] bg-white flex-shrink-0 text-center ">
+            <div className="service-item">
                 <div className='mx-auto'>
                  <svg 
                     className='mx-auto'
@@ -65,7 +67,7 @@ export default function Service() {
                 <span className='s-desc text-[15px] leading-[24px] text-sub-head mt-[15px] capitalize'> android and iOS app Development </span>
             </div>
 
-            <div className="service-item w-[32%] px-[76px] pt-[28px] pb-[42px] bg-white flex-shrink-0 text-center ">
+            <div className="service-item">
                 <div className='mx-auto'>
                  <svg 
                     className='mx-auto'
@@ -80,7 +82,7 @@ export default function Service() {
                 <span className='s-desc text-[15px] leading-[24px] text-sub-head mt-[15px] capitalize'> domain and hosting service </span>
             </div>
 
-            <div className="service-item w-[32%] px-[76px] pt-[28px] pb-[42px] bg-white flex-shrink-0 text-center ">
+            <div className="service-item">
                 <div className='mx-auto'>
                  <svg 
                     className='mx-auto'
@@ -95,7 +97,7 @@ export default function Service() {
                 <span className='s-desc text-[15px] leading-[24px] text-sub-head mt-[15px] capitalize'> rank your site </span>
             </div>
 
-            <div className="service-item w-[32%] px-[76px] pt-[28px] pb-[42px] bg-white flex-shrink-0 text-center ">
+            <div className="service-item">
                 <h4 className='s-title text-[18px] leading-[25px] font-[600] text-text capitalize '> advertising </h4>
                 <span className='s-desc block text-[15px] leading-[24px] text-sub-head pt-[22px] capitalize'> 
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. 
