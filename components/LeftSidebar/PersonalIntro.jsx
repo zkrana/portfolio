@@ -5,7 +5,7 @@ import { faFacebook, faInstagram, faTwitter, faGithub, faYoutube } from '@fortaw
 
 export default function PersonalIntro() {
   return (
-        <div className=' border-b border-[#F0F0F6] pb-4'>
+        <div className='w-[220px] border-b border-[#F0F0F6] pb-4'>
             <div>
                 <Image src={pImage} alt='Portfolio Image' className='mx-auto' />
                 <span className='block text-center text-lg text-text font-semibold capitalize mt-3'> Ziaul Kabir </span>

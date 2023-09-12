@@ -14,6 +14,7 @@ export default function Pricing() {
       features: ['Feature 1', 'Feature 2', 'Feature 3'],
     },
     {
+      ribon: 'most popular',
       title: 'Standard Plan',
       price: 39.99,
       desc: 'For most businesses that want to optimize web queries',
@@ -39,7 +40,8 @@ export default function Pricing() {
             <PricingPlan
               key={index}
               title={plan.title}
-              desc={plan.desc} // Corrected this line
+              desc={plan.desc}
+              ribon={plan.ribon}
               price={plan.price}
               features={plan.features}
             />
