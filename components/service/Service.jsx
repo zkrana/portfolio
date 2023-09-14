@@ -11,7 +11,7 @@ export default function Service() {
         />
 
         {/* Service Wrapper */}
-        <div className='service-wrapper flex gap-5 justify-between flex-wrap mt-[50px]'>
+        <div id='service' className='service-wrapper flex gap-5 justify-between flex-wrap mt-[50px]'>
             <div className="service-item">
                 <div className='mx-auto'>
                  <svg 

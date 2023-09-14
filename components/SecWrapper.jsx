@@ -2,6 +2,8 @@ import React from 'react'
 import Hero from './hero/Hero'
 import Service from './service/Service'
 import Pricing from './pricing/Pricing'
+import Reviews from './reviews/Reviews'
+
 
 export default function SecWrapper
 () {
@@ -10,6 +12,7 @@ export default function SecWrapper
       <Hero />
       <Service />
       <Pricing />
+      <Reviews />
     </div>
   )
 }

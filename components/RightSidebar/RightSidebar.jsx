@@ -17,7 +17,7 @@ export default function
             </svg>
         </div>
         <div className=' mt-[212px] flex flex-col items-center gap-[43px] '>
-            <span className='r-menu relative w-10 h-10 bg-bg rounded-full flex justify-center items-center'>
+            <a href='#' className='r-menu relative w-10 h-10 bg-bg rounded-full flex justify-center items-center'>
                 <div className='m-tooltip hidden'>
                     <span> Home </span>
                 </div>
@@ -32,9 +32,9 @@ export default function
                         </clipPath>
                     </defs>
                 </svg>
-            </span>
+            </a>
 
-            <span className='r-menu relative w-10 h-10 bg-[#F0F0F6] rounded-full flex justify-center items-center'>
+            <a href='#service' className='r-menu relative w-10 h-10 bg-[#F0F0F6] rounded-full flex justify-center items-center'>
                 <div className='m-tooltip hidden'>
                     <span> Service </span>
                 </div>
@@ -48,9 +48,9 @@ export default function
                         </clipPath>
                     </defs>
                 </svg>
-            </span>
+            </a>
 
-            <span className='r-menu relative w-10 h-10 bg-[#F0F0F6] rounded-full flex justify-center items-center '>
+            <a href='#' className='r-menu relative w-10 h-10 bg-[#F0F0F6] rounded-full flex justify-center items-center '>
                 <div className='m-tooltip hidden'>
                     <span> Service </span>
                 </div>
@@ -64,9 +64,9 @@ export default function
                         </clipPath>
                     </defs>
                 </svg>
-            </span>
+            </a>
 
-            <span className='r-menu relative w-10 h-10 bg-[#F0F0F6] rounded-full flex justify-center items-center '>
+            <a href='#' className='r-menu relative w-10 h-10 bg-[#F0F0F6] rounded-full flex justify-center items-center '>
                 <div className='m-tooltip hidden'>
                     <span> History </span>
                 </div>
@@ -80,9 +80,9 @@ export default function
                         </clipPath>
                     </defs>
                 </svg>
-            </span>
+            </a>
 
-            <span className='r-menu relative w-10 h-10 bg-[#F0F0F6] rounded-full flex justify-center items-center '>
+            <a href='#' className='r-menu relative w-10 h-10 bg-[#F0F0F6] rounded-full flex justify-center items-center '>
                 <div className='m-tooltip hidden'>
                     <span> Portfolio </span>
                 </div>
@@ -96,9 +96,9 @@ export default function
                         </clipPath>
                     </defs>
                 </svg>
-            </span>
+            </a>
 
-            <span className='r-menu relative w-10 h-10 bg-[#F0F0F6] rounded-full flex justify-center items-center '>
+            <a href='#' className='r-menu relative w-10 h-10 bg-[#F0F0F6] rounded-full flex justify-center items-center '>
                 <div className='m-tooltip hidden'>
                     <span> Contact </span>
                 </div>
@@ -112,7 +112,7 @@ export default function
                         </clipPath>
                     </defs>
                 </svg>
-            </span>
+            </a>
         </div>
     </div>
   )
