@@ -1,16 +1,34 @@
+'use client'
 import PropTypes from 'prop-types';
+import { useState } from 'react';
+import Image from 'next/image';
 
-const Testimonial = ({ image, text, highlight, author }) => {
+const Testimonial = ({ image, text, highlight, author, position, rating }) => {
+  const [userRating, setUserRating] = useState(rating);
+
   return (
-    <div className="testimonial w-[32%] p-[25px] bg-white ">
-      <h3 className='text-[18px] leading-6 font-semibold mt-[16px] mb-[18px] uppercase'>{highlight}</h3>
+    <div className="testimonial w-full p-[25px] bg-white">
+      <div className="rating-stars">
+        {[...Array(5)].map((_, index) => (
+          <span
+            key={index}
+            className={`star ${index < userRating ? 'filled' : ''}`}
+            style={{ color: index < userRating ? 'gold' : 'gray' }}
+          >
+            &#9733;
+          </span>
+        ))}
+      </div>
+      <h3 className="text-[18px] leading-6 font-semibold mt-[16px] mb-[18px] uppercase">
+        {highlight}
+      </h3>
+      <p className="text-sub-head text-[15px] leading-5 mt-4">{text}</p>
 
-      <p className=' text-sub-head text-[15px] leading-5 mt-4'>{text}</p>
-
-      <div className='flex items-center gap-4 mt-[30px]'>
-        <img src={image} alt={author} />
+      <div className="flex items-center gap-4 mt-[30px]">
+        <Image src={image} alt={author} width="100" height="100" />
         <div>
-          <p>{author}</p>
+          <p className='text-[18px] leading-6 text-text mb-[5px] font-semibold'>{author}</p>
+          <span className='text-[15px] leading-5 text-sub-head '>{position}</span>
         </div>
       </div>
     </div>
@@ -20,8 +38,10 @@ const Testimonial = ({ image, text, highlight, author }) => {
 Testimonial.propTypes = {
   image: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  highlight: PropTypes.string.isRequired, // Add PropTypes for highlight
+  highlight: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired,
 };
 
 export default Testimonial;
