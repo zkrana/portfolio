@@ -7,7 +7,7 @@ import reviewer2 from '../../public/review-2.svg';
 import reviewer3 from '../../public/review-3.svg';
 
 // import Swiper core and required modules
-import { Pagination, A11y } from 'swiper/modules';
+import { Pagination, Autoplay, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -68,16 +68,17 @@ export default function Reviews() {
       />
       <div className="testimonial-section max-w-6xl mx-auto mt-[50px]">
         <Swiper
-          modules={[Pagination, A11y]}
-          spaceBetween={50}
+          modules={[Pagination, Autoplay, A11y]}
+          spaceBetween={20}
           slidesPerView={3}
           pagination={{ clickable: true }}
+          autoplay={{ delay: 3000 }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log('slide change')}
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <Testimonial
+              <Testimonial className='testimonial-slide w-full'
                 key={index}
                 image={testimonial.image}
                 highlight={testimonial.highlight}

@@ -35,7 +35,7 @@ export default function Pricing() {
         description='Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum'
       />
       <div className="pricing-page mt-[51px]">
-        <div className="pricing-plans-container max-w-5xl mx-auto flex justify-between gap-[21px]">
+        <div className="pricing-plans-container max-w-6xl mx-auto flex justify-between gap-[21px]">
           {demoPricingPlans.map((plan, index) => (
             <PricingPlan
               key={index}

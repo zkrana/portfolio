@@ -222,7 +222,17 @@
 
 
 
-
+/* CSS for slide animation */
+.testimonial-slide {
+    opacity: 0;
+    transform: translateX(-50px); /* Start off-screen to the left */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Add transitions for smooth animation */
+  }
+  
+  .testimonial-slide.active {
+    opacity: 1;
+    transform: translateX(0); /* Slide in from the left */
+  }
 
 
 

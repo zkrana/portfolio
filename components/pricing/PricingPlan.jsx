@@ -3,7 +3,7 @@ import { deepStrictEqual } from "assert";
 // Reusable PricingPlan component
 function PricingPlan({ title, price, features, desc, ribon }) {
     return (
-      <div className="pricing-plans bg-white px-[31px] pt-[54px] pb-6 relative">
+      <div className="pricing-plans w-full bg-white px-[31px] pt-[54px] pb-6 relative">
         {ribon === "most popular" && (
           <span className="bg-[#B0B0E6] text-white w-full h-8 flex justify-center items-center absolute top-0 left-0 right-0 text-[15px] leading-[18px] capitalize ">
             {ribon}
