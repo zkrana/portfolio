@@ -1,0 +1,12 @@
+/* styles.css */
+/* Define a class for items that should be visible */
+.visible {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Define a class for items that should be hidden */
+  .hidden {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
