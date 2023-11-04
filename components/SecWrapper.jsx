@@ -1,39 +1,60 @@
-import React, {Suspense} from 'react'
+import React, { Suspense } from "react";
 
-const Hero =  React.lazy( ()=> import("./hero/Hero") );
-const Service =  React.lazy( ()=> import("./service/Service") );
-const Pricing =  React.lazy( ()=> import("./pricing/Pricing") );
-const Reviews =  React.lazy( ()=> import("./reviews/Reviews") );
-const Education =  React.lazy( ()=> import("./education/Educations") );
-const Portfolio =  React.lazy( ()=> import("./portfolio/Portfolio") );
+const Hero = React.lazy(() => import("./hero/Hero"));
+const Service = React.lazy(() => import("./service/Service"));
+const Pricing = React.lazy(() => import("./pricing/Pricing"));
+const Reviews = React.lazy(() => import("./reviews/Reviews"));
+const Education = React.lazy(() => import("./education/Educations"));
+const Portfolio = React.lazy(() => import("./portfolio/Portfolio"));
+const Footer = React.lazy(() => import("./footer/Footer"));
 
-export default function SecWrapper
-() {
+export default function SecWrapper() {
   return (
-    <div className='w-[calc(100%-473px)] ml-[335px] pb-10 '>
-      <Suspense fallback={<div> Hero is Loading... </div>}>
+    <div className="secContentWrap xl:w-[calc(100%-473px)] w-[calc(100%-425px)] xl:ml-[335px] ml-[310px]">
+      <Suspense
+        fallback={<div className=" animate-spin"> Hero is Loading... </div>}
+      >
         <Hero />
       </Suspense>
 
-      <Suspense fallback={<div> Service is Loading... </div>}>
+      <Suspense
+        fallback={<div className=" animate-spin"> Service is Loading... </div>}
+      >
         <Service />
       </Suspense>
 
-      <Suspense fallback={<div> Pricing is Loading... </div>}>
+      <Suspense
+        fallback={<div className=" animate-spin"> Pricing is Loading... </div>}
+      >
         <Pricing />
       </Suspense>
 
-      <Suspense fallback={<div> Reviews is Loading... </div>}>
+      <Suspense
+        fallback={<div className=" animate-spin"> Reviews is Loading... </div>}
+      >
         <Reviews />
       </Suspense>
 
-      <Suspense fallback={<div> Education is Loading... </div>}>
+      <Suspense
+        fallback={
+          <div className=" animate-spin"> Education is Loading... </div>
+        }
+      >
         <Education />
       </Suspense>
-      
-      <Suspense fallback={<div> Portfolio is Loading... </div>}>
+
+      <Suspense
+        fallback={
+          <div className=" animate-spin"> Portfolio is Loading... </div>
+        }
+      >
         <Portfolio />
       </Suspense>
+      <Suspense
+        fallback={<div className=" animate-spin"> Footer is Loading... </div>}
+      >
+        <Footer />
+      </Suspense>
     </div>
-  )
+  );
 }

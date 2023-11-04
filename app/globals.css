@@ -2,239 +2,259 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities{
-    .leftSocial{
-        @apply w-6 h-6 transition-all hover:bg-bg/50 rounded-full bg-bg flex justify-center items-center p-1 cursor-pointer hover:transform  hover:scale-[1.1];
-    }
-    .skill-box{
-        @apply mb-[8px];
-    }
-    .skill-bar{
-        @apply w-[220px] h-[6px] border border-[#E6E6FA] rounded-full;
-    }
-    .bar-title{
-        @apply text-[15px] leading-5 text-[#767676];
-    }
-    .skill-per{
-        position: relative;
-        bottom: 0;
-        display: block;
-        height: 100%;
-        width: 95%;
-        border-radius: 6px;
-        background: #B0B0E6;
-        animation: progress 0.4s ease-in-out forwards;
-        opacity: 0;
-    }
-    .skill-per.english {
-        width: 80%;
-        animation-delay: 0.1s;
-    }
-    
-    .skill-per.hindi{
-        width: 60%;
-        animation-delay: 0.2s;
-    }
-    .skill-per.hindi{
-        width: 75%;
-        animation-delay: 0.2s;
-    }
-    .skill-per.js{
-        width: 65%;
-        animation-delay: 0.2s;
-    }
-    .skill-per.react{
-        width: 45%;
-        animation-delay: 0.2s;
-    }
-    .skill-per.next{
-        width: 35%;
-        animation-delay: 0.2s;
-    }
-    .skill-per .tooltip{
-        position: absolute;
-        right: -14px;
-        top: -28px;
-        font-size: 9px;
-        font-weight: 500;
-        color: #000;
-        padding: 2px 6px;
-        border-radius: 3px;
-        background: #E6E6FA;
-        z-index: 1;
-    }
-    .tooltip::before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: -2px;
-        height: 10px;
-        width: 10px;
-        z-index: -1;
-        background-color: #E6E6FA;
-        transform: translateX(-50%) rotate(45deg);
-    }
-
-    .m-tooltip{
-        transition: all .4s;
-    }
-    .r-menu{
-        cursor: pointer;
-    }
-    .r-menu:hover .m-tooltip{
-        display: block;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: -28px;
-        font-size: 9px;
-        font-weight: 500;
-        color: #000;
-        padding: 2px 6px;
-        border-radius: 3px;
-        background: #E6E6FA;
-        z-index: 1;
-    }
-    .m-tooltip::before {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: -2px;
-        height: 10px;
-        width: 10px;
-        z-index: -1;
-        background-color: #E6E6FA;
-        transform: translateX(-50%) rotate(45deg);
-    }
-    
-    @keyframes progress {
-        0% {
-            width: 0;
-            opacity: 1;
-        }
-    
-        100% {
-            opacity: 1;
-        }
-    }
-
-
-/* SkillToggle.css */
-.skill-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px; /* Adjust the height as needed */
+@layer utilities {
+  .leftSocial {
+    @apply w-6 h-6 transition-all hover:bg-bg/50 rounded-full bg-bg flex justify-center items-center p-1 cursor-pointer hover:transform  hover:scale-[1.1];
   }
-  
+  .skill-box {
+    @apply mb-[8px];
+  }
+  .skill-bar {
+    @apply w-[220px] h-[6px] border border-[#E6E6FA] rounded-full;
+  }
+  .bar-title {
+    @apply text-[15px] leading-5 text-white;
+  }
+  .skill-per {
+    position: relative;
+    bottom: 0;
+    display: block;
+    height: 100%;
+    width: 95%;
+    border-radius: 6px;
+    background: #b0b0e6;
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
+  }
+  .skill-per.english {
+    width: 80%;
+    animation-delay: 0.1s;
+  }
+
+  .skill-per.hindi {
+    width: 60%;
+    animation-delay: 0.2s;
+  }
+  .skill-per.hindi {
+    width: 75%;
+    animation-delay: 0.2s;
+  }
+  .skill-per.js {
+    width: 65%;
+    animation-delay: 0.2s;
+  }
+  .skill-per.react {
+    width: 45%;
+    animation-delay: 0.2s;
+  }
+  .skill-per.next {
+    width: 35%;
+    animation-delay: 0.2s;
+  }
+  .skill-per .tooltip {
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #e6e6fa;
+    z-index: 1;
+  }
+  .tooltip::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: #e6e6fa;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .m-tooltip {
+    transition: all 0.4s;
+  }
+  .r-menu {
+    cursor: pointer;
+  }
+  .r-menu:hover #rightMenuHover {
+    fill: white;
+  }
+  .r-menu:hover .m-tooltip {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #e6e6fa;
+    z-index: 1;
+  }
+  .m-tooltip::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background-color: #e6e6fa;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  @keyframes progress {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /* SkillToggle.css */
+  .skill-toggle {
+    @apply flex items-center justify-center xl:h-[100px];
+  }
+
   .skill-animation {
-    color: #B0B0E6;
+    color: #b0b0e6;
     opacity: 0;
     transition: opacity 0.5s ease-in-out; /* Adjust the transition duration and timing as needed */
   }
-  
+
   .skill-animation.show {
     opacity: 1;
   }
 
   .shape-blob {
-	background:#B0B0E6;
-	height: 250px;
-	width: 250px;
-	border-radius: 30% 50% 20% 40%;
-  	animation: 
-		transform 20s ease-in-out infinite both alternate,
-		movement_one 40s ease-in-out infinite both;
-	opacity:.7;
-	position: absolute;
-	left: 70%;
-	top: 30%;
-}
-@keyframes transform
-{
+    background: #b0b0e6;
+    height: 250px;
+    width: 250px;
+    border-radius: 30% 50% 20% 40%;
+    animation: transform 20s ease-in-out infinite both alternate,
+      movement_one 40s ease-in-out infinite both;
+    opacity: 0.7;
+    position: absolute;
+    left: 70%;
+    top: 30%;
+  }
+  @keyframes transform {
     0%,
-  100% { border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%; } 
-   20% { border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%; } 
-   40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%; } 
-   60% { border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%; } 
-   80% { border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%; } 
-}
+    100% {
+      border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+    }
+    20% {
+      border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%;
+    }
+    40% {
+      border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%;
+    }
+    60% {
+      border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%;
+    }
+    80% {
+      border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%;
+    }
+  }
 
-
-@keyframes movement_one
-{
+  @keyframes movement_one {
     0%,
-  100% { transform: none; }
-   50% { transform: translate(50%, 20%) rotateY(10deg) scale(1.2); }
-}
+    100% {
+      transform: none;
+    }
+    50% {
+      transform: translate(50%, 20%) rotateY(10deg) scale(1.2);
+    }
+  }
 
-@keyframes movement_two
-{
+  @keyframes movement_two {
     0%,
-  500% { transform: none; }
-   50% { transform: translate(50%, 20%) rotate(-200deg) scale(1.2);}
-}
-  
+    500% {
+      transform: none;
+    }
+    50% {
+      transform: translate(50%, 20%) rotate(-200deg) scale(1.2);
+    }
+  }
 
-.btn {
+  .btn {
     position: relative;
     padding: 10px 20px;
     background-color: tomato; /* Initial background color */
     color: white; /* Text color */
     overflow: hidden;
-}
+  }
+  .btns {
+    @apply bg-[#1E293B] py-2 px-7 text-white transition-colors hover:text-sub-head;
+  }
 
-.btn::before {
+  .btn::before {
     content: "";
     position: absolute;
     top: 0;
     left: -100%; /* Initial position off-screen to the left */
     width: 100%;
     height: 100%;
-    background-color: #B0B0E6; /* Background color on hover */
+    background-color: #b0b0e6; /* Background color on hover */
     transition: left 0.4s; /* Transition the left property */
-}
+  }
 
-.btn:hover::before {
+  .btn:hover::before {
     left: 0; /* Move the pseudo-element to the left edge of the button */
-}
+  }
 
-.price-btn{
+  .price-btn {
     position: absolute;
     bottom: 25px;
     width: 80%;
-    padding: 10.5px 40.5px ;
+    padding: 10.5px 40.5px;
     border-radius: 30px;
-    background: var(--White, #FFF);
+    background: var(--White, #fff);
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
-    color: #2B2B2B;
+    color: #2b2b2b;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    text-transform: capitalize; 
-}
+    text-transform: capitalize;
+  }
 
-/* Service Page */
-.service-item {
-    @apply w-[32%] min-h-[239px] px-[76px] pt-[28px] pb-[42px] bg-white flex-shrink-0 text-center ;
-}
+  /* Service Page */
+  .service-item {
+    @apply basis-[32%] flex-grow min-h-[239px] px-[76px] pt-[28px] pb-[42px] bg-[#1E293B] flex-shrink-0 text-center;
+  }
 
-
-
-/* CSS for slide animation */
-.testimonial-slide {
+  /* CSS for slide animation */
+  .testimonial-slide {
     opacity: 0;
     transform: translateX(-50px); /* Start off-screen to the left */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Add transitions for smooth animation */
   }
-  
+
   .testimonial-slide.active {
     opacity: 1;
     transform: translateX(0); /* Slide in from the left */
   }
 
+  @media screen and (max-width: 1280px) {
+    .personalImg {
+      @apply w-[230px];
+    }
+  }
 
-
-
+  @media screen and (max-width: 11100px) {
+    .secContentWrap {
+      @apply w-[calc(100%-84px)] ml-0;
+    }
+  }
 }

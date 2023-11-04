@@ -1,26 +1,26 @@
-'use client'
-import React, { useEffect, useState } from 'react';
+"use client";
+import React, { useEffect, useState } from "react";
 
 export default function SkillToggle() {
   const Skills = [
     {
       id: 1,
-      skill: 'Front-end Developer',
+      skill: "Front-end Developer",
     },
     {
       id: 2,
-      skill: 'Domain, Hosting Expert',
+      skill: "Domain, Hosting Expert",
     },
     {
       id: 3,
-      skill: 'WordPress Expert',
+      skill: "WordPress Expert",
     },
     {
       id: 4,
-      skill: 'Dreamer',
+      skill: "Dreamer",
     },
   ];
-  const [currentName, setCurrentName] = useState('');
+  const [currentName, setCurrentName] = useState("");
   const [visibleCharacters, setVisibleCharacters] = useState(0);
 
   const skillChange = () => {
@@ -56,10 +56,14 @@ export default function SkillToggle() {
   }, []);
 
   return (
-    <div className='flex items-center gap-2'>
-      <h4 className='skill-toggle text-6xl leading-[98px] text-text font-bold '> 
-      <span> I am a </span> 
-      <span className={`skill-animation show ml-2`}> {currentName} </span> </h4>
+    <div className="flex items-center gap-2">
+      <h4 className="skill-toggle 2xl:text-6xl xl:text-4xl text-2xl xl:leading-[98px] text-text font-bold ">
+        <span> I am a </span>
+        <span className={`skill-animation show ml-2`}>
+          {" "}
+          {currentName}{" "}
+        </span>{" "}
+      </h4>
     </div>
   );
 }
