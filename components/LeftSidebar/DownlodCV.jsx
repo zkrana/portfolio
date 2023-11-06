@@ -5,7 +5,7 @@ export default function DownloadCV() {
     <div className="w-[220px] mt-6">
       <button
         type="button"
-        className="mx-auto w-full text-center bg-[#B0B0E6] shadow text-[#0F172A] flex justify-center items-center gap-3 py-[10px]"
+        className="mx-auto w-full text-center bg-[#f59d32] transition-colors hover:bg-white shadow text-[#0F172A] flex justify-center items-center gap-3 py-[10px]"
         download
         aria-label="Download CV"
       >

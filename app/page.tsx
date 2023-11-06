@@ -1,20 +1,19 @@
 "use client";
+import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
 import Image from "next/image";
 import LeftSideBar from "@/components/leftsidebar/LeftSideBar";
 import SecWrapper from "@/components/SecWrapper";
 import RightSidebar from "@/components/rightsidebar/RightSidebar";
-import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core"; // Import library
 
-library.add(faBars, faTimes); // Initialize FontAwesome library
+library.add(faBars, faTimes);
 
 export default function Home() {
   const [showSidebar, setShowSidebar] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Function to toggle the visibility of the sidebar
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };
@@ -24,13 +23,9 @@ export default function Home() {
       setIsMobile(window.innerWidth < 1100);
     };
 
-    // Attach the event listener when the component mounts
     window.addEventListener("resize", handleResize);
-
-    // Call the event handler initially
     handleResize();
 
-    // Remove the event listener when the component unmounts
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -44,9 +39,11 @@ export default function Home() {
           onClick={toggleSidebar}
         >
           {showSidebar ? (
-            <FontAwesomeIcon icon={faTimes} /> // FontAwesome close icon
+            <div className="fixed top-0 left-0 right-0 pl-5 pt-4">
+              <FontAwesomeIcon icon={faTimes} />
+            </div>
           ) : (
-            <FontAwesomeIcon icon={faBars} /> // FontAwesome bars icon
+            <FontAwesomeIcon icon={faBars} />
           )}
         </div>
       )}
@@ -59,7 +56,7 @@ export default function Home() {
 
       <SecWrapper />
 
-      <RightSidebar />
+      {!isMobile && <RightSidebar />}
     </div>
   );
 }

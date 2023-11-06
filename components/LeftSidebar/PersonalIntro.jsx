@@ -1,5 +1,5 @@
 import Image from "next/image";
-import pImage from "@/public/Profile.svg";
+import pImage from "@/public/profile.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
