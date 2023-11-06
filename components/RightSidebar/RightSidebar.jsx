@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function () {
+export default function RightSidebar() {
   return (
     <div className="flex-shrink-0 h-full xl:w-[108px] w-[84px] bg-[#1E293B] shadow-sm xl:px-[39px] px-6 pt-[50px] fixed right-0 top-0">
       <div
