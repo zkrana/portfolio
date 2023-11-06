@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import PersonalImg from "../../public/zk.png"; // Make sure this path is correct
+import PersonalImg from "../../../public/zk.png"; // Make sure this path is correct
 import ToggleSkill from "./SkillToggle";
 export default function Hero() {
   return (

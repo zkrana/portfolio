@@ -1,60 +1,60 @@
-'use client'
-import React from 'react';
-import Content from '../Content';
-import Testimonial from './Testimonial';
-import reviewer1 from '../../public/review-1.svg';
-import reviewer2 from '../../public/review-2.svg';
-import reviewer3 from '../../public/review-3.svg';
+"use client";
+import React from "react";
+import Content from "../Content";
+import Testimonial from "./Testimonial";
+import reviewer1 from "../../../public/review-1.svg";
+import reviewer2 from "../../../public/review-2.svg";
+import reviewer3 from "../../../public/review-3.svg";
 
 // import Swiper core and required modules
-import { Pagination, Autoplay, A11y } from 'swiper/modules';
+import { Pagination, Autoplay, A11y } from "swiper/modules";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 
 export default function Reviews() {
   const testimonials = [
     {
       image: reviewer1,
-      highlight: 'Best Work',
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      author: 'James Gouse',
-      position: 'CEO, BaseBox',
+      highlight: "Best Work",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      author: "James Gouse",
+      position: "CEO, BaseBox",
       rating: 5,
     },
     {
       image: reviewer2,
-      highlight: 'I will be back again',
-      text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.',
-      author: 'Jane Smith',
-      position: 'CEO, BaseBox',
+      highlight: "I will be back again",
+      text: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+      author: "Jane Smith",
+      position: "CEO, BaseBox",
       rating: 5,
     },
     {
       image: reviewer3,
-      highlight: 'Amazing man',
-      text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.',
-      author: 'John Doe',
-      position: 'CEO, BaseBox',
+      highlight: "Amazing man",
+      text: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+      author: "John Doe",
+      position: "CEO, BaseBox",
       rating: 4,
     },
     {
       image: reviewer3,
-      highlight: 'Amazing man',
-      text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.',
-      author: 'John Doe',
-      position: 'CEO, BaseBox',
+      highlight: "Amazing man",
+      text: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+      author: "John Doe",
+      position: "CEO, BaseBox",
       rating: 4,
     },
     {
       image: reviewer3,
-      highlight: 'Amazing man',
-      text: 'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.',
-      author: 'John Doe',
-      position: 'CEO, BaseBox',
+      highlight: "Amazing man",
+      text: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
+      author: "John Doe",
+      position: "CEO, BaseBox",
       rating: 4,
     },
     // Add more testimonials as needed
@@ -74,11 +74,12 @@ export default function Reviews() {
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000 }}
           onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log('slide change')}
+          onSlideChange={() => console.log("slide change")}
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              <Testimonial className='testimonial-slide w-full'
+              <Testimonial
+                className="testimonial-slide w-full"
                 key={index}
                 image={testimonial.image}
                 highlight={testimonial.highlight}

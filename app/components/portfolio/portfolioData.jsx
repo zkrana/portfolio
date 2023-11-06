@@ -1,6 +1,6 @@
-import web1 from "../../public/web1.png";
-import web2 from "../../public/web2.png";
-import app1 from "../../public/app.png";
+import web1 from "../../../public/web1.png";
+import web2 from "../../../public/web2.png";
+import app1 from "../../../public/app.png";
 
 const portfolioData = [
   {
