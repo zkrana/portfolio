@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import Image from "next/image";
-import LeftSideBar from "../components/leftsidebar/LeftSideBar";
-import SecWrapper from "../components/SecWrapper";
-import RightSidebar from "../components/rightsidebar/RightSidebar";
+import LeftSideBar from "@/components/leftsidebar/LeftSideBar";
+import SecWrapper from "@/components/SecWrapper";
+import RightSidebar from "@/components/rightsidebar/RightSidebar";
 
 library.add(faBars, faTimes);
 
