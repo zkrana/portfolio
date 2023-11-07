@@ -7,13 +7,13 @@ const EducationList = ({ education }) => {
         <table key={index}>
           <tbody>
             <tr
-              className={`flex ${
+              className={`flex flex-wrap ${
                 index !== education.length - 1
                   ? "border-b border-[#28364d] pb-8"
                   : ""
               }`}
             >
-              <td className="w-full flex flex-col items-stretch">
+              <td className="basis-full sm:basis-1/2 flex flex-col items-stretch">
                 <h3 className="text-text text-[18px] font-semibold leading-6 mb-[25px]">
                   {item.institution}
                 </h3>
@@ -25,7 +25,7 @@ const EducationList = ({ education }) => {
                   </span>
                 </p>
               </td>
-              <td className="w-1/2">
+              <td className="basis-full sm:basis-1/2">
                 <h4 className="text-text text-[18px] font-semibold leading-6 mb-[25px]">
                   {" "}
                   {item.degree}

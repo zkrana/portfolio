@@ -75,6 +75,17 @@ export default function Reviews() {
           autoplay={{ delay: 3000 }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
+          breakpoints={{
+            768: {
+              slidesPerView: 1,
+            },
+            992: {
+              slidesPerView: 2,
+            },
+            1200: {
+              slidesPerView: 3,
+            },
+          }}
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>

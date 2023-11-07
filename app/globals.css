@@ -195,9 +195,14 @@
     overflow: hidden;
   }
   .btns {
-    @apply bg-[#1E293B] py-2 px-7 text-white transition-colors hover:text-sub-head;
+    @apply bg-[#1E293B] transition-colors hover:bg-[#f59d32] py-2 px-7 text-white hover:text-black;
   }
+  .btn-active {
+    @apply bg-[#f59d32] transition-colors hover:bg-[#1E293B] hover:text-white;
+  }
+  /* CSS animation for the appearing portfolio item */
 
+  /* Define CSS transition class names */
   .btn::before {
     content: "";
     position: absolute;

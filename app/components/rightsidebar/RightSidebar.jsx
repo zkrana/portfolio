@@ -1,8 +1,28 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function RightSidebar() {
+  const rightSidebarVariants = {
+    hidden: {
+      x: -300, // Initial position (off-screen to the left)
+      opacity: 0,
+    },
+    visible: {
+      x: 0, // Final position (on-screen)
+      opacity: 1,
+      transition: {
+        duration: 0.5, // Adjust the duration as needed
+        ease: "easeOut", // Adjust the easing function as needed
+      },
+    },
+  };
   return (
-    <div className="flex-shrink-0 h-full xl:w-[108px] w-[84px] bg-[#1E293B] shadow-sm xl:px-[39px] px-6 pt-[50px] fixed right-0 top-0">
+    <motion.div
+      className="flex-shrink-0 h-full xl:w-[108px] w-[84px] bg-[#1E293B] shadow-sm xl:px-[39px] px-6 pt-[50px] fixed right-0 top-0"
+      initial="hidden"
+      animate="visible"
+      variants={rightSidebarVariants}
+    >
       <div
         id="dark-mode"
         className="cursor-pointer flex justify-center items-center"
@@ -203,6 +223,6 @@ export default function RightSidebar() {
           </svg>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }

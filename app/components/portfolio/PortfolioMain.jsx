@@ -1,7 +1,7 @@
-"use client";
 import React, { useState } from "react";
 import PortfolioItem from "./PortfolioItem";
 import portfolioData from "./portfolioData";
+import { CSSTransition } from "react-transition-group";
 
 const PortfolioMain = () => {
   const [category, setCategory] = useState("all");
@@ -17,7 +17,7 @@ const PortfolioMain = () => {
 
   return (
     <div className="portfolio text-center">
-      <div className="filter-buttons space-x-4 mt-4">
+      <div className="filter-buttons flex flex-wrap gap-5 justify-center mt-4">
         <button
           className={`btns ${category === "all" ? "btn-active" : ""}`}
           onClick={() => filterItems("all")}
@@ -42,7 +42,15 @@ const PortfolioMain = () => {
 
       <div className="portfolio-items max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
         {filteredItems.map((item, index) => (
-          <PortfolioItem key={index} {...item} />
+          <CSSTransition
+            key={index}
+            in={true}
+            appear={true}
+            timeout={500}
+            classNames="fade"
+          >
+            <PortfolioItem key={index} {...item} />
+          </CSSTransition>
         ))}
       </div>
     </div>

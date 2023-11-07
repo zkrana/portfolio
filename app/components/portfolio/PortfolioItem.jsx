@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const PortfolioItem = ({ title, image }) => {
   return (
-    <div className="portfolio-item">
+    <a href="#" className="portfolio-item">
       <Image
         src={image}
         alt={title}
@@ -12,7 +12,7 @@ const PortfolioItem = ({ title, image }) => {
         height="100%"
         className="w-full h-full object-cover"
       />
-    </div>
+    </a>
   );
 };
 
