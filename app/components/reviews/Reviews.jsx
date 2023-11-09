@@ -70,7 +70,7 @@ export default function Reviews() {
         <Swiper
           modules={[Pagination, Autoplay, A11y]}
           spaceBetween={20}
-          slidesPerView={3}
+          slidesPerView={1}
           pagination={{ clickable: true }}
           autoplay={{ delay: 3000 }}
           onSwiper={(swiper) => console.log(swiper)}
