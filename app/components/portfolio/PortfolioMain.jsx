@@ -16,7 +16,7 @@ const PortfolioMain = () => {
       : portfolioData.filter((item) => item.category === category);
 
   return (
-    <div className="portfolio text-center">
+    <div className="portfolio text-center mt-[50px] sm:px-0 px-4">
       <div className="filter-buttons flex flex-wrap gap-5 justify-center mt-4">
         <button
           className={`btns ${category === "all" ? "btn-active" : ""}`}

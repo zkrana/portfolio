@@ -1,31 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
 
 export default function RightSidebar() {
-  const rightSidebarVariants = {
-    hidden: {
-      x: -300, // Initial position (off-screen to the left)
-      opacity: 0,
-    },
-    visible: {
-      x: 0, // Final position (on-screen)
-      opacity: 1,
-      transition: {
-        duration: 0.5, // Adjust the duration as needed
-        ease: "easeOut", // Adjust the easing function as needed
-      },
-    },
-  };
   return (
-    <motion.div
-      className="flex-shrink-0 h-full xl:w-[108px] w-[84px] bg-[#1E293B] shadow-sm xl:px-[39px] px-6 pt-[50px] fixed right-0 top-0"
-      initial="hidden"
-      animate="visible"
-      variants={rightSidebarVariants}
-    >
+    <div className="flex justify-center items-center flex-col h-full xl:w-[108px] w-[84px] bg-[#1E293B] shadow-sm xl:px-[39px] px-6 pt-[50px] fixed right-0 top-0">
       <div
         id="dark-mode"
-        className="cursor-pointer flex justify-center items-center"
+        className="cursor-pointer flex justify-center items-center absolute top-14"
       >
         <svg
           width="30"
@@ -47,7 +27,7 @@ export default function RightSidebar() {
           </defs>
         </svg>
       </div>
-      <div className=" mt-[212px] flex flex-col items-center gap-[43px] ">
+      <div className="flex flex-col items-center gap-[43px] ">
         <a
           href="#"
           className="r-menu relative w-10 h-10 bg-bg rounded-full flex justify-center items-center transition-colors"
@@ -223,6 +203,6 @@ export default function RightSidebar() {
           </svg>
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 }

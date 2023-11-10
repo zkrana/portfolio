@@ -39,7 +39,7 @@ export default function Home() {
           onClick={toggleSidebar}
         >
           {showSidebar ? (
-            <div className="fixed top-0 left-0 right-0 pl-5 pt-4">
+            <div className="fixed top-0 left-0 right-0 pl-5 pt-4 z-9999">
               <FontAwesomeIcon icon={faTimes} />
             </div>
           ) : (
@@ -49,7 +49,9 @@ export default function Home() {
       )}
 
       {isMobile && showSidebar && (
-        <LeftSideBar isMobile={isMobile} showSidebar={showSidebar} />
+        <div className="fixed top-0 left-0 right-0 pl-5 pt-4 z-9999">
+          <LeftSideBar isMobile={isMobile} showSidebar={showSidebar} />
+        </div>
       )}
 
       {!isMobile && <LeftSideBar isMobile={isMobile} showSidebar={true} />}

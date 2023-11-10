@@ -15,11 +15,11 @@ function PricingPlan({ title, price, features, desc, ribon }) {
         <span className=" text-text text-4xl font-[700]">${price}</span>{" "}
         <span className=" text-sub-head">/month</span>
       </h5>
-      <p className="plan-desc text-sub-head text-[15px] leading-5 max-w-[248px] text-center pb-[21px]">
+      <p className="plan-desc block mx-auto text-sub-head text-[15px] leading-5 max-w-[248px] text-center pb-[21px]">
         {" "}
         {desc}
       </p>
-      <ul className="plan-features">
+      <ul className="plan-features min-h-[240px] mt-4">
         {features.map((feature, index) => (
           <li
             className="text-sub-head text-[15px] leading-5 mb-[17px] flex gap-2 "
@@ -43,11 +43,11 @@ function PricingPlan({ title, price, features, desc, ribon }) {
       </ul>
 
       {ribon === "most popular" ? (
-        <button className="price-btn z-10 !bg-[#B0B0E6] !text-[#1E293B]">
+        <button className="price-btn block mx-auto z-10 !bg-[#B0B0E6] !text-[#1E293B]">
           Choose Plan
         </button>
       ) : (
-        <button className="price-btn z-10 transition-colors hover:bg-[#B0B0E6] hover:text-[#fff]">
+        <button className="price-btn block mx-auto z-10 transition-colors hover:bg-[#B0B0E6] hover:text-[#fff]">
           Choose Plan
         </button>
       )}

@@ -3,18 +3,13 @@ import Image from "next/image";
 import PersonalImg from "../../../public/zk.png"; // Make sure this path is correct
 import ToggleSkill from "./SkillToggle";
 
-import { motion as m } from "framer-motion";
 export default function Hero() {
   return (
-    <m.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="bg-[#1E293B] flex justify-between items-center pt-[93px] pl-[60px] pb-[74px] relative overflow-hidden"
-    >
+    <div className="bg-[#1E293B] flex sm:flex-row flex-col justify-between items-center pt-[93px] sm:pl-[60px] pl-4 sm:pr-0 pr-4 sm:pb-[74px] -z-[1] pb-0 relative overflow-hidden">
       <div class="shape-blob"></div>
 
-      <div className="content xl:max-w-4xl max-w-sm">
-        <h1 className="her-t 2xl:text-8xl xl:text-4xl text-2xl 2xl:leading-[98px] font-[700] text-text ">
+      <div className="content xl:max-w-4xl max-w-full">
+        <h1 className="her-t 2xl:text-8xl text-4xl 2xl:leading-[98px] font-[700] text-text ">
           I’m Zk Rana
         </h1>
 
@@ -58,9 +53,9 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      <figure className="personalImg absolute right-[58px] bottom-0">
+      <figure className="personalImg sm:absolute relative sm:right-[58px] sm:left-auto left-0 bottom-0">
         <Image src={PersonalImg} alt="Hero" />
       </figure>
-    </m.div>
+    </div>
   );
 }

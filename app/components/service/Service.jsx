@@ -1,14 +1,9 @@
 import React from "react";
 import Content from "../Content";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Service() {
   return (
-    <motion.div
-      className="service"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-    >
+    <div className="service">
       <Content
         title="my services"
         description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum"
@@ -17,9 +12,9 @@ export default function Service() {
       {/* Service Wrapper */}
       <div
         id="service"
-        className="service-wrapper flex gap-5 justify-between flex-wrap mt-[50px]"
+        className="service-wrapper flex gap-5 justify-between flex-wrap mt-[50px] sm:px-0 px-4"
       >
-        <motion.div className="service-item">
+        <div className="service-item">
           <div className="mx-auto">
             <svg
               className="mx-auto"
@@ -55,7 +50,7 @@ export default function Service() {
             {" "}
             blog, e-commerce{" "}
           </span>
-        </motion.div>
+        </div>
 
         <div className="service-item">
           <div className="mx-auto">
@@ -264,6 +259,6 @@ export default function Service() {
           </a>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

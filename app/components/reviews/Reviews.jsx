@@ -66,7 +66,7 @@ export default function Reviews() {
         title="recommendations"
         description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum"
       />
-      <div className="testimonial-section max-w-6xl mx-auto mt-[50px]">
+      <div className="testimonial-section max-w-6xl mx-auto mt-[50px] sm:px-0 px-4">
         <Swiper
           modules={[Pagination, Autoplay, A11y]}
           spaceBetween={20}

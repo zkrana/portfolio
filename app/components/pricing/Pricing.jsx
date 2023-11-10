@@ -39,7 +39,7 @@ export default function Pricing() {
         title="Price plans"
         description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum"
       />
-      <div className="pricing-page mt-[51px]">
+      <div className="pricing-page mt-[51px] sm:px-0 px-4">
         <div className="pricing-plans-container max-w-6xl mx-auto flex flex-wrap justify-between gap-[21px]">
           {demoPricingPlans.map((plan, index) => (
             <PricingPlan
