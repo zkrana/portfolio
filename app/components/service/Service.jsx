@@ -6,7 +6,7 @@ export default function Service() {
     <div className="service">
       <Content
         title="my services"
-        description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum"
+        description="From crafting stunning websites and intuitive user experiences to developing powerful apps, boosting online visibility, and ensuring reliable hosting and targeted advertising, we're your all-in-one solution."
       />
 
       {/* Service Wrapper */}

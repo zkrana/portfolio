@@ -27,7 +27,7 @@ export default function RightSidebar() {
           </defs>
         </svg>
       </div>
-      <div className="flex flex-col items-center gap-[43px] ">
+      <div className="flex flex-col items-center web:gap-[43px] gap-[24px] ">
         <a
           href="#"
           className="r-menu relative w-10 h-10 bg-bg rounded-full flex justify-center items-center transition-colors"

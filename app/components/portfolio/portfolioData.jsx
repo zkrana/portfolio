@@ -6,19 +6,19 @@ const portfolioData = [
   {
     title: "Project 1",
     image: web1, // Specify the correct image import
-    category: "Web Design",
+    category: "Web Development",
     description: "Description of project 1",
   },
   {
     title: "Project 2",
     image: web2, // Specify the correct image import
-    category: "Web Design",
+    category: "UI/UX Design",
     description: "Description of project 2",
   },
   {
     title: "AD Project 1",
     image: app1, // Specify the correct image import
-    category: "App Development",
+    category: "WordPress Customization",
     description: "Description of app project 1",
   },
 ];

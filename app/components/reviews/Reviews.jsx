@@ -64,10 +64,11 @@ export default function Reviews() {
     <div className="reviews">
       <Content
         title="recommendations"
-        description="Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. lorem ipsum"
+        description="Your success is our priority, and our recommendations showcase the quality and value we bring to every project"
       />
-      <div className="testimonial-section max-w-6xl mx-auto mt-[50px] sm:px-0 px-4">
+      <div className="testimonial-section max-w-6xl mx-auto mt-[50px] sm:px-0 px-4 -z-[1]">
         <Swiper
+          style={{ zIndex: -1 }}
           modules={[Pagination, Autoplay, A11y]}
           spaceBetween={20}
           slidesPerView={1}

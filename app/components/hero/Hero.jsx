@@ -16,15 +16,14 @@ export default function Hero() {
         <ToggleSkill />
 
         <p className="hero-desc text-base text-sub-head pt-4 max-w-lg ">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat
-          feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc
-          lectus.
+          I pride myself on clear communication, timely deliveries, and crafting
+          tailored, top-quality solutions for your project.
         </p>
 
         <div className="w-[154px] h-12 mt-6">
           <button
             type="button"
-            className="btn w-full flex justify-center items-center gap-3 px-[19.5px] py-[10px]"
+            className="btn w-full flex justify-center items-center gap-3 px-[19.5px] py-[10px] cursor-pointer"
             download
             aria-label="Download CV"
           >

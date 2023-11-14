@@ -25,18 +25,26 @@ const PortfolioMain = () => {
           All
         </button>
         <button
-          className={`btns ${category === "Web Design" ? "btn-active" : ""}`}
-          onClick={() => filterItems("Web Design")}
+          className={`btns ${
+            category === "Web Development" ? "btn-active" : ""
+          }`}
+          onClick={() => filterItems("Web Development")}
         >
-          Web Design
+          Web Development
+        </button>
+        <button
+          className={`btns ${category === "UI/UX Design" ? "btn-active" : ""}`}
+          onClick={() => filterItems("UI/UX Design")}
+        >
+          UI/UX Design
         </button>
         <button
           className={`btns ${
-            category === "App Development" ? "btn-active" : ""
+            category === "WordPress Customization" ? "btn-active" : ""
           }`}
-          onClick={() => filterItems("App Development")}
+          onClick={() => filterItems("WordPress Customization")}
         >
-          App Development
+          WordPress Customization
         </button>
       </div>
 

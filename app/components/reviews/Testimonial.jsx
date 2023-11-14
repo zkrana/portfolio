@@ -7,7 +7,7 @@ const Testimonial = ({ image, text, highlight, author, position, rating }) => {
   const [userRating, setUserRating] = useState(rating);
 
   return (
-    <div className="testimonial w-full p-[25px] bg-[#1E293B]">
+    <div className="testimonial relative w-full p-[25px] bg-[#1E293B]">
       <div className="rating-stars">
         {[...Array(5)].map((_, index) => (
           <span
