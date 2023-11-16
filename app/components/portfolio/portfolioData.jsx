@@ -1,25 +1,89 @@
-import web1 from "../../../public/web1.png";
-import web2 from "../../../public/web2.png";
-import app1 from "../../../public/app.png";
+import carLanding from "../../../public/car-landing-page.png";
+import adminDash from "../../../public/admin-dashboard.png";
+import adminLogin from "../../../public/admin-login.png";
+import comingpage1 from "../../../public/coming-soon-template-1.png";
+import comingpage2 from "../../../public/coming-soon-template-2.png";
+import doctorAppointment from "../../../public/doctor-aapointment.png";
+import doctorWebsite from "../../../public/doctor-website.png";
+import hostingerLogin from "../../../public/hostinger-login.png";
+import hostingerUserPanel from "../../../public/hostinger-user-panel.png";
+import launchly from "../../../public/launchly.png";
+//Wordpress
+import hostkori from "../../../public/hostkori.png";
 
 const portfolioData = [
   {
-    title: "Project 1",
-    image: web1, // Specify the correct image import
+    title: "Car Landing Page",
+    image: carLanding,
     category: "Web Development",
-    description: "Description of project 1",
+    description:
+      "Find, Book or Rent a car, quickly and easily. Language: React",
   },
   {
-    title: "Project 2",
-    image: web2, // Specify the correct image import
-    category: "UI/UX Design",
-    description: "Description of project 2",
+    title: "Admin Dashboard",
+    image: adminDash,
+    category: "Web Development",
+    description: "A intuitive user friendly dahsboard for all type of business",
   },
   {
-    title: "AD Project 1",
-    image: app1, // Specify the correct image import
+    title: "Admin login",
+    image: adminLogin,
+    category: "Web Development",
+    description: "awesome Admin login page",
+  },
+  {
+    title: "Coming soon Template for Themeforest",
+    image: comingpage1,
+    category: "Web Development",
+    description: "Creative & Technical Services Coming soon template.",
+  },
+  {
+    title: "Coming soon Template for Themeforest",
+    image: comingpage2,
+    category: "Web Development",
+    description: "Creative & Technical Services Coming soon template.",
+  },
+  {
+    title: "Doctor Appointment Website",
+    image: doctorAppointment,
+    category: "Web Development",
+    description: "Schedule an appointment for doctor consultation.",
+  },
+  {
+    title: "Hostinger Login Page Clone",
+    image: hostingerLogin,
+    category: "Web Development",
+    description: "Hostinger Login Page Clone.",
+  },
+  {
+    title: "Hostinger user Panel",
+    image: hostingerUserPanel,
+    category: "Web Development",
+    description: "Hostinger User Panel Front-end Clone Using React",
+  },
+  {
+    title: "Doctor Website for Themeforest",
+    image: doctorWebsite,
+    category: "Web Development",
+    description:
+      "This template is designed for medical specialist, to take appointment on onlie.",
+  },
+  {
+    title: "Coming Soon Template Showcase Website",
+    image: launchly,
+    category: "Web Development",
+    description:
+      "Launchly is brand for themeforest focus web template design & developing firm..",
+  },
+
+  // WordPress
+
+  {
+    title: "Hostkori",
+    image: hostkori,
     category: "WordPress Customization",
-    description: "Description of app project 1",
+    description:
+      "This was our company hosting servicess website uwing WordPress",
   },
 ];
 
