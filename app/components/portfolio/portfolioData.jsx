@@ -1,4 +1,6 @@
 import carLanding from "../../../public/car-landing-page.png";
+import upspell from "../../../public/upspell.png";
+import upspellLife from "../../../public/life_at_UPSPELL_web.jpg";
 import adminDash from "../../../public/admin-dashboard.png";
 import adminLogin from "../../../public/admin-login.png";
 import comingpage1 from "../../../public/coming-soon-template-1.png";
@@ -12,6 +14,18 @@ import launchly from "../../../public/launchly.png";
 import hostkori from "../../../public/hostkori.png";
 
 const portfolioData = [
+  {
+    title: "Upspell Home Page",
+    image: upspell,
+    category: "Web Development",
+    description: "It's our company main site home page. ",
+  },
+  {
+    title: "Life at Upspell Page",
+    image: upspellLife,
+    category: "Web Development",
+    description: "Life at upspell, where life is just a fun.",
+  },
   {
     title: "Car Landing Page",
     image: carLanding,

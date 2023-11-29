@@ -6,6 +6,7 @@ const Pricing = React.lazy(() => import("./pricing/Pricing"));
 const Reviews = React.lazy(() => import("./reviews/Reviews"));
 const Education = React.lazy(() => import("./education/Educations"));
 const Portfolio = React.lazy(() => import("./portfolio/Portfolio"));
+const Blog = React.lazy(() => import("./blog/BLog"));
 const Footer = React.lazy(() => import("./footer/Footer"));
 
 export default function SecWrapper() {
@@ -42,13 +43,17 @@ export default function SecWrapper() {
       >
         <Education />
       </Suspense>
-
       <Suspense
         fallback={
           <div className=" animate-spin"> Portfolio is Loading... </div>
         }
       >
         <Portfolio />
+      </Suspense>
+      <Suspense
+        fallback={<div className=" animate-spin"> Blog is Loading... </div>}
+      >
+        <Blog />
       </Suspense>
       <Suspense
         fallback={<div className=" animate-spin"> Footer is Loading... </div>}
