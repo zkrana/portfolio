@@ -2,7 +2,7 @@ import React from "react";
 
 export default function RightSidebar() {
   return (
-    <div className="flex justify-center items-center flex-col h-full xl:w-[108px] w-[84px] bg-[#1E293B] shadow-sm xl:px-[39px] px-6 pt-[50px] fixed right-0 top-0">
+    <div className="flex justify-center items-center flex-col h-full bg-[#1E293B] shadow-sm xl:px-[39px] px-6 pt-[50px] fixed right-0 top-0">
       <div
         id="dark-mode"
         className="cursor-pointer flex justify-center items-center absolute top-14"

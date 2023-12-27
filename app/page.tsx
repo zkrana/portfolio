@@ -33,32 +33,34 @@ export default function Home() {
 
   return (
     <div className="w-full flex gap-[30px] justify-between h-full">
-      {isMobile && (
-        <div
-          className="text-white text-2xl cursor-pointer absolute left-4 top-7 z-[20]"
-          onClick={toggleSidebar}
-        >
-          {showSidebar ? (
-            <div className="fixed top-0 left-0 right-0 pl-5 pt-4 z-9999">
-              <FontAwesomeIcon icon={faTimes} />
-            </div>
-          ) : (
-            <FontAwesomeIcon icon={faBars} />
-          )}
-        </div>
-      )}
+      <div className="w-[calc(17%-20px)]">
+        {isMobile && (
+          <div
+            className="text-white text-2xl cursor-pointer absolute left-4 top-7 z-[20]"
+            onClick={toggleSidebar}
+          >
+            {showSidebar ? (
+              <div className="fixed top-0 left-0 right-0 pl-5 pt-4 z-9999">
+                <FontAwesomeIcon icon={faTimes} />
+              </div>
+            ) : (
+              <FontAwesomeIcon icon={faBars} />
+            )}
+          </div>
+        )}
 
-      {isMobile && showSidebar && (
-        <div className="fixed top-0 left-0 right-0 pl-5 pt-4 z-9999">
-          <LeftSideBar isMobile={isMobile} showSidebar={showSidebar} />
-        </div>
-      )}
+        {isMobile && showSidebar && (
+          <div className="fixed top-0 left-0 right-0 pl-5 pt-4 z-9999">
+            <LeftSideBar isMobile={isMobile} showSidebar={showSidebar} />
+          </div>
+        )}
 
-      {!isMobile && <LeftSideBar isMobile={isMobile} showSidebar={true} />}
-
-      <SecWrapper />
-
-      {!isMobile && <RightSidebar />}
+        {!isMobile && <LeftSideBar isMobile={isMobile} showSidebar={true} />}
+      </div>
+      <div className="w-[calc(76%-20px)]">
+        <SecWrapper />
+      </div>
+      <div className="w-[calc(7%-20px)]">{!isMobile && <RightSidebar />}</div>
     </div>
   );
 }

@@ -11,7 +11,7 @@ const Footer = React.lazy(() => import("./footer/Footer"));
 
 export default function SecWrapper() {
   return (
-    <div className="secContentWrap xl:w-[calc(100%-473px)] w-[calc(100%-425px)] xl:ml-[335px] ml-[310px]">
+    <div className="secContentWrap">
       <Suspense
         fallback={<div className=" animate-spin"> Hero is Loading... </div>}
       >
