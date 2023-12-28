@@ -5,56 +5,60 @@ import ToggleSkill from "./SkillToggle";
 
 export default function Hero() {
   return (
-    <div className="bg-[#1E293B] flex sm:flex-row flex-col justify-between items-center pt-[93px] sm:pl-[60px] pl-4 sm:pr-0 pr-4 sm:pb-[74px] -z-[1] pb-0 relative overflow-hidden">
-      <div class="shape-blob"></div>
+    <div className="bg-[#1E293B] flex sm:flex-row flex-col justify-between items-center pt-[93px] sm:pl-[60px] pl-4 sm:pr-0 pr-4 overflow-hidden">
+      <div className="flex justify-between items-end w-full relative">
+        <div className="content sm:pb-16 pb-0">
+          <h1 className="her-t 2xl:text-8xl text-4xl 2xl:leading-[98px] font-[700] text-text ">
+            I’m Zk Rana
+          </h1>
 
-      <div className="content xl:max-w-4xl max-w-full">
-        <h1 className="her-t 2xl:text-8xl text-4xl 2xl:leading-[98px] font-[700] text-text ">
-          I’m Zk Rana
-        </h1>
+          <ToggleSkill />
 
-        <ToggleSkill />
+          <p className="hero-desc text-base text-sub-head pt-4 max-w-lg ">
+            I pride myself on clear communication, timely deliveries, and
+            crafting tailored, top-quality solutions for your project.
+          </p>
 
-        <p className="hero-desc text-base text-sub-head pt-4 max-w-lg ">
-          I pride myself on clear communication, timely deliveries, and crafting
-          tailored, top-quality solutions for your project.
-        </p>
-
-        <div className="w-[154px] h-12 mt-6">
-          <button
-            type="button"
-            className="btn w-full flex justify-center items-center gap-3 px-[19.5px] py-[10px] cursor-pointer"
-            download
-            aria-label="Download CV"
-          >
-            <span className="text-xl z-10">Hire Me</span> {/* Text color */}
-            <svg
-              className="mt-1 z-10"
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+          <div className="w-[154px] h-12 mt-6">
+            <a
+              href="#"
+              type="button"
+              className="btn w-full flex justify-center items-center gap-3 px-[19.5px] py-[10px] cursor-pointer"
+              download
+              aria-label="Download CV"
             >
-              <g clip-path="url(#clip0_2_2655)">
-                <path
-                  d="M10.7812 7.33312L7.20517 3.75712L8.14784 2.81445L13.3332 7.99979L8.14784 13.1851L7.20517 12.2425L10.7812 8.66645H2.6665V7.33312H10.7812Z"
-                  fill="#fff"
-                />{" "}
-                {/* Icon color */}
-              </g>
-              <defs>
-                <clipPath id="clip0_2_2655">
-                  <rect width="16" height="16" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
+              <span className="text-xl z-10">Hire Me</span> {/* Text color */}
+              <svg
+                className="mt-1 z-10"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_2_2655)">
+                  <path
+                    d="M10.7812 7.33312L7.20517 3.75712L8.14784 2.81445L13.3332 7.99979L8.14784 13.1851L7.20517 12.2425L10.7812 8.66645H2.6665V7.33312H10.7812Z"
+                    fill="#fff"
+                  />{" "}
+                  {/* Icon color */}
+                </g>
+                <defs>
+                  <clipPath id="clip0_2_2655">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="shape-blob overflow-hidden"></div>
+          <figure className="personalImg sm:absolute relative sm:right-[58px] sm:left-auto left-0 bottom-0">
+            <Image src={PersonalImg} alt="Hero" />
+          </figure>
         </div>
       </div>
-      <figure className="personalImg sm:absolute relative sm:right-[58px] sm:left-auto left-0 bottom-0">
-        <Image src={PersonalImg} alt="Hero" />
-      </figure>
     </div>
   );
 }

@@ -32,8 +32,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full flex gap-[30px] justify-between h-full">
-      <div className="w-[calc(17%-20px)]">
+    <div className="w-full flex gap-6 justify-between h-full">
+      <div className="w-[calc(17%-16px)]">
         {isMobile && (
           <div
             className="text-white text-2xl cursor-pointer absolute left-4 top-7 z-[20]"
@@ -57,10 +57,10 @@ export default function Home() {
 
         {!isMobile && <LeftSideBar isMobile={isMobile} showSidebar={true} />}
       </div>
-      <div className="w-[calc(76%-20px)]">
+      <div className="w-[calc(77.4%-16px)]">
         <SecWrapper />
       </div>
-      <div className="w-[calc(7%-20px)]">{!isMobile && <RightSidebar />}</div>
+      <div className="w-[calc(5.6%-16px)]">{!isMobile && <RightSidebar />}</div>
     </div>
   );
 }

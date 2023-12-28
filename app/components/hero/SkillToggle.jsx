@@ -61,7 +61,7 @@ export default function SkillToggle() {
   return (
     <div className="flex items-center gap-2">
       <h4 className="skill-toggle 2xl:text-6xl xl:text-4xl text-2xl xl:leading-[98px] text-text font-bold ">
-        <span> I am a </span>
+        <span className="font-normal"> I am a </span>
         <span className={`skill-animation show ml-2`}>
           {" "}
           {Skills[currentSkillIndex].skill}{" "}
