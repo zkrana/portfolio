@@ -60,7 +60,7 @@ export default function SkillToggle() {
     return () => {
       clearInterval(intervalId);
     };
-  }, []);
+  }, [10000]);
 
   return (
     <div className="flex items-center gap-2 mt-4">

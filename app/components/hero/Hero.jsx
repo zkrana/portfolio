@@ -7,7 +7,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   return (
-    <div className="bg-[#1E293B] relative flex sm:flex-row flex-col justify-between items-center pt-[93px] sm:pl-[60px] pl-4 sm:pr-0 pr-4 overflow-hidden">
+    <div className="bg-[#1E293B] relative flex sm:flex-row flex-col justify-between items-center pt-32 sm:pl-[60px] pl-4 sm:pr-0 pr-4 overflow-hidden">
       <div
         className="absolute w-36 h-36 flex justify-center rounded-full items-center -left-10 -top-10
        transition-all hover:w-40 hover:h-40 text-3xl hover:text-4xl shadow-md hover:shadow-lg bg-[#121f34] text-white hover:!text-black hover:bg-[#f59d32] pl-3 pt-5"
