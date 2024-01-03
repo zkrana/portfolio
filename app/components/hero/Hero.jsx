@@ -1,22 +1,35 @@
 "use client";
 import Image from "next/image";
-import PersonalImg from "../../../public/zk.png"; // Make sure this path is correct
+import PersonalImg from "../../../public/zk.png";
 import ToggleSkill from "./SkillToggle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   return (
-    <div className="bg-[#1E293B] flex sm:flex-row flex-col justify-between items-center pt-[93px] sm:pl-[60px] pl-4 sm:pr-0 pr-4 overflow-hidden">
-      <div className="flex justify-between items-end w-full relative">
-        <div className="content sm:pb-16 pb-0">
-          <h1 className="her-t 2xl:text-8xl text-4xl 2xl:leading-[98px] font-[700] text-text ">
-            I’m Zk Rana
+    <div className="bg-[#1E293B] relative flex sm:flex-row flex-col justify-between items-center pt-[93px] sm:pl-[60px] pl-4 sm:pr-0 pr-4 overflow-hidden">
+      <div
+        className="absolute w-36 h-36 flex justify-center rounded-full items-center -left-10 -top-10
+       transition-all hover:w-40 hover:h-40 text-3xl hover:text-4xl shadow-md hover:shadow-lg bg-[#121f34] text-white hover:!text-black hover:bg-[#f59d32] pl-3 pt-5"
+      >
+        <FontAwesomeIcon className="cursor-pointer" icon={faBars} />
+      </div>
+      <div className="max-w-6xl mx-auto flex justify-between gap-8 sm:gap-10 lg:gap-14 items-end w-full pb-16 sm:pb-0 relative">
+        <div className="content lg:w-[calc(65%-28px)] sm:w-[calc(65%-20px)] w-full sm:pb-16 pb-0">
+          <h1 className="her-t 2xl:text-6xl text-4xl font-bold text-text uppercase">
+            We're Lyzerslab
           </h1>
 
           <ToggleSkill />
 
           <p className="hero-desc text-base text-sub-head pt-4 max-w-lg ">
-            I pride myself on clear communication, timely deliveries, and
-            crafting tailored, top-quality solutions for your project.
+            Welcome to Lyzerslab, where innovation meets expertise. We
+            specialize in full-stack and app development, offer top-notch domain
+            and hosting services, excel in WP customization, and pride ourselves
+            on crafting solid UI/UX designs.
+          </p>
+          <p className="hero-desc text-base text-sub-head pt-4">
+            Let's elevate your digital presence together!
           </p>
 
           <div className="w-[154px] h-12 mt-6">
@@ -27,7 +40,7 @@ export default function Hero() {
               download
               aria-label="Download CV"
             >
-              <span className="text-xl z-10">Hire Me</span> {/* Text color */}
+              <span className="text-xl z-10">Hire Me</span>
               <svg
                 className="mt-1 z-10"
                 width="16"
@@ -52,7 +65,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div>
+        <div className="lg:w-[calc(35%-28px)] sm:w-[calc(35%-20px)] w-full">
           <div class="shape-blob overflow-hidden"></div>
           <figure className="personalImg sm:absolute relative sm:right-[58px] sm:left-auto left-0 bottom-0">
             <Image src={PersonalImg} alt="Hero" />

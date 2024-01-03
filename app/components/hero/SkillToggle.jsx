@@ -5,19 +5,23 @@ export default function SkillToggle() {
   const Skills = [
     {
       id: 1,
-      skill: "Front-end Developer",
+      skill: "Full-Stack Developement",
     },
     {
       id: 2,
-      skill: "Domain, Hosting Expert",
+      skill: "App Developement",
     },
     {
       id: 3,
-      skill: "WordPress Expert",
+      skill: "Domain, Hosting Service",
     },
     {
       id: 4,
-      skill: "Dreamer",
+      skill: "WP Customization",
+    },
+    {
+      id: 5,
+      skill: "Solid UI/UX Design",
     },
   ];
   const [currentSkillIndex, setCurrentSkillIndex] = useState(0);
@@ -59,9 +63,9 @@ export default function SkillToggle() {
   }, []);
 
   return (
-    <div className="flex items-center gap-2">
-      <h4 className="skill-toggle 2xl:text-6xl xl:text-4xl text-2xl xl:leading-[98px] text-text font-bold ">
-        <span className="font-normal"> I am a </span>
+    <div className="flex items-center gap-2 mt-4">
+      <h4 className="skill-toggle xl:text-4xl text-2xl text-text font-bold uppercase ">
+        <span className="font-normal"> We Provide </span>
         <span className={`skill-animation show ml-2`}>
           {" "}
           {Skills[currentSkillIndex].skill}{" "}

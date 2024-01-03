@@ -12,7 +12,7 @@ export default function Service() {
       {/* Service Wrapper */}
       <div
         id="service"
-        className="service-wrapper flex gap-5 justify-between flex-wrap mt-[50px] sm:px-0 px-4"
+        className="service-wrapper max-w-6xl mx-auto flex gap-5 justify-between flex-wrap mt-[50px] sm:px-0 px-4"
       >
         <div className="service-item">
           <div className="mx-auto">
