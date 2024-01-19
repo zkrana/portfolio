@@ -51,7 +51,7 @@ function MyNavigation({ closeMenu }) {
         className="absolute bg-[#121f34] sm:!top-10 !top-6 bottom-0 sm:!left-10 !left-6 right-0 w-screen h-screen
         flex justify-center items-center transition-all"
       >
-        <div className="w-full flex justify-end absolute top-0 sm:px-14 px-10 sm:pt-10 pt-6">
+        <div className="w-full flex justify-end absolute top-0 sm:px-14 px-6 sm:pt-10 pt-6">
           <div className=" bg-black shadow animate-spin hover:animate-none shadow-slate-300 rounded-full sm:w-10 w-8 transition-all sm:hover:w-12 hover:w-10 sm:h-10 h-8 sm:hover:h-12 hover:h-10 flex justify-center items-center ">
             <FontAwesomeIcon
               className=" cursor-pointer text-white text-2xl"
@@ -69,20 +69,22 @@ function MyNavigation({ closeMenu }) {
           ))}
         </ul>
 
-        <div className=" lg:max-w-4xl w-[90%] mx-auto flex justify-between lg:flex-row flex-col items-center gap-6 absolute sm:bottom-10 bottom-6">
-          <div className="flex sm:flex-row flex-col sm:justify-center sm:items-center sm:gap-6 gap-3 text-white">
+        <div className=" lg:max-w-4xl w-[90%] mx-auto flex justify-between lg:flex-row flex-col items-center gap-6 absolute sm:bottom-10 bottom-14">
+          <div className="flex sm:justify-center sm:items-center sm:gap-6 gap-3 text-white">
             <a
               href="mailto:zkranao@gmail.com"
-              className=" text-lg flex items-center gap-2 bg-black rounded shadow sm:px-6 px-4 py-2 hover:text-slate-300 transition-colors duration-500"
+              className="sm:text-lg text-sm flex items-center sm:gap-2 gap-1 bg-black rounded shadow sm:px-6 px-2 py-2 hover:text-slate-300 transition-colors duration-500"
             >
               {" "}
               <FontAwesomeIcon icon={faEnvelope} />
-              <span className=" block -mt-[6px]">zkranao@gmail.com</span>
+              <span className=" block sm:-mt-[6px] -mt-[3px]">
+                zkranao@gmail.com
+              </span>
             </a>
 
             <a
               href="tel:01824228717"
-              className=" text-lg flex items-center gap-2 bg-black rounded shadow sm:px-6 px-4 py-2 hover:text-slate-300 transition-colors duration-500"
+              className="sm:text-lg text-sm flex items-center sm:gap-2 gap-1 bg-black rounded shadow sm:px-6 px-2 py-2 hover:text-slate-300 transition-colors duration-500"
             >
               <FontAwesomeIcon icon={faPhone} />
               <span>01824-228-717</span>
