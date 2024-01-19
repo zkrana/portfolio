@@ -9,16 +9,16 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto flex justify-between gap-8 sm:gap-10 lg:gap-14 items-end w-full pb-16 sm:pb-0 relative">
         <div className="content lg:w-[calc(65%-28px)] sm:w-[calc(65%-20px)] w-full sm:pb-16 pb-0">
           <h1 className="her-t 2xl:text-6xl text-4xl font-bold text-text uppercase">
-            We&apos;re Zk Rana
+            We&apos;re Lyzerslab
           </h1>
 
           <ToggleSkill />
 
           <p className="hero-desc text-base text-sub-head pt-4 max-w-lg ">
-            Welcome to Zk Rana, where innovation meets expertise. We specialize
-            in full-stack and app development, offer top-notch domain and
-            hosting services, excel in WP customization, and pride ourselves on
-            crafting solid UI/UX designs.
+            Welcome to Lyzerslab, where innovation meets expertise. We
+            specialize in full-stack and app development, offer top-notch domain
+            and hosting services, excel in WP customization, and pride ourselves
+            on crafting solid UI/UX designs.
           </p>
           <p className="hero-desc text-base text-sub-head pt-4">
             Let&apos;s elevate your digital presence together!

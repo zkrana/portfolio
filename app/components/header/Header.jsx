@@ -51,7 +51,7 @@ function MyNavigation({ closeMenu }) {
         className="absolute bg-[#121f34] sm:!top-10 !top-6 bottom-0 sm:!left-10 !left-6 right-0 w-screen h-screen
         flex justify-center items-center transition-all"
       >
-        <div className="w-full flex justify-end absolute top-0 px-14 pt-10">
+        <div className="w-full flex justify-end absolute top-0 sm:px-14 px-10 sm:pt-10 pt-6">
           <div className=" bg-black shadow animate-spin hover:animate-none shadow-slate-300 rounded-full sm:w-10 w-8 transition-all sm:hover:w-12 hover:w-10 sm:h-10 h-8 sm:hover:h-12 hover:h-10 flex justify-center items-center ">
             <FontAwesomeIcon
               className=" cursor-pointer text-white text-2xl"
