@@ -69,7 +69,7 @@ function MyNavigation({ closeMenu }) {
           ))}
         </ul>
 
-        <div className=" lg:max-w-4xl w-[90%] mx-auto flex justify-between lg:flex-row flex-col items-center gap-6 absolute sm:bottom-10 bottom-14">
+        <div className=" lg:max-w-4xl w-[90%] mx-auto flex justify-between lg:flex-row flex-col items-center gap-6 absolute sm:bottom-10 bottom-20">
           <div className="flex sm:justify-center sm:items-center sm:gap-6 gap-3 text-white">
             <a
               href="mailto:zkranao@gmail.com"
