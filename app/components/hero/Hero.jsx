@@ -29,7 +29,7 @@ export default function Hero() {
             on crafting solid UI/UX designs.
           </p>
           <p className="hero-desc text-base text-sub-head pt-4">
-            Let's elevate your digital presence together!
+            Let&apos;s elevate your digital presence together!
           </p>
 
           <div className="w-[154px] h-12 mt-6">
@@ -66,7 +66,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="lg:w-[calc(35%-28px)] sm:w-[calc(35%-20px)] w-full">
-          <div class="shape-blob overflow-hidden"></div>
+          <div className="shape-blob overflow-hidden"></div>
           <figure className="personalImg sm:absolute relative sm:right-[58px] sm:left-auto left-0 bottom-0">
             <Image src={PersonalImg} alt="Hero" />
           </figure>
