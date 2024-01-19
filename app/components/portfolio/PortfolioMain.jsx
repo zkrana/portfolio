@@ -1,14 +1,21 @@
-// PortfolioMain.js
 import React, { useState } from "react";
 import PortfolioItem from "./PortfolioItem";
 import portfolioData from "./portfolioData";
 import { CSSTransition } from "react-transition-group";
-import PopupModal from "./PopupModal"; // Make sure the path is correct
+import PopupModal from "./PopupModal";
+import { title } from "process";
+
 const PortfolioMain = () => {
   const [category, setCategory] = useState("all");
+  const [visibleItems, setVisibleItems] = useState(6);
 
   const filterItems = (category) => {
     setCategory(category);
+    setVisibleItems(6); // Reset visible items when changing category
+  };
+
+  const loadMore = () => {
+    setVisibleItems((prevVisibleItems) => prevVisibleItems + 6);
   };
 
   const filteredItems =
@@ -60,7 +67,7 @@ const PortfolioMain = () => {
       </div>
 
       <div className="portfolio-wrapper max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
-        {filteredItems.map((item, index) => (
+        {filteredItems.slice(0, visibleItems).map((item, index) => (
           <div key={index} className="portfolio-items">
             <CSSTransition
               key={index}
@@ -75,7 +82,15 @@ const PortfolioMain = () => {
         ))}
       </div>
 
-      {/* Moved the PopupModal outside the mapped items */}
+      {visibleItems < filteredItems.length && (
+        <button
+          onClick={loadMore}
+          className="max-w-[120px] mx-auto mt-10 rounded-lg px-[19.5px] py-[10px] transition-colors bg-[#f59d32] border border-[#f59d32] hover:text-white cursor-pointer hover:bg-[#1E293B] hover:border-bg-[#1E293B]"
+        >
+          Load More
+        </button>
+      )}
+
       <div className={`modal ${selectedItem ? "show" : ""}`}>
         {/* Your modal content here */}
         {selectedItem && (

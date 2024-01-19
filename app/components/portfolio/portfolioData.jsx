@@ -1,3 +1,5 @@
+import netlify from "../../../public/netlify.png";
+import mozilla from "../../../public/mozilla.png";
 import carLanding from "../../../public/car-landing-page.png";
 import upspell from "../../../public/upspell.png";
 import upspellLife from "../../../public/life_at_UPSPELL_web.jpg";
@@ -15,16 +17,32 @@ import hostkori from "../../../public/hostkori.png";
 
 const portfolioData = [
   {
+    title: "Netlify Website",
+    image: netlify,
+    category: "Web Development",
+    description: "Netlify Website cloning",
+    live: "https://netlipyclone.netlify.app/",
+  },
+  {
+    title: "Mozilla Login Page",
+    image: mozilla,
+    category: "Web Development",
+    description: "Mozilla Login Page cloning",
+    live: "https://mozilla-signup.netlify.app/",
+  },
+  {
     title: "Upspell Home Page",
     image: upspell,
     category: "Web Development",
     description: "It's our company main site home page. ",
+    live: "https://upspell.com/",
   },
   {
     title: "Life at Upspell Page",
     image: upspellLife,
     category: "Web Development",
     description: "Life at upspell, where life is just a fun.",
+    live: "https://upspell.com/life-at-upspell",
   },
   {
     title: "Car Landing Page",
@@ -32,6 +50,7 @@ const portfolioData = [
     category: "Web Development",
     description:
       "Find, Book or Rent a car, quickly and easily. Language: React",
+    live: "https://car-app-h.vercel.app",
   },
   {
     title: "Admin Dashboard",
