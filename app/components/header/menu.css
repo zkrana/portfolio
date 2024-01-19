@@ -1,0 +1,34 @@
+/* Add this CSS in your styles or a separate stylesheet */
+.relative {
+  position: relative;
+}
+
+.menu-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.2); /* Magnify on hover */
+}
+
+.menu-item a {
+  position: relative;
+  z-index: 1;
+}
+
+.menu-item:hover a {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add text shadow on hover */
+  animation: textShadowAnimation 1s ease-in-out infinite alternate; /* Text shadow animation */
+}
+
+@keyframes textShadowAnimation {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    text-shadow: 10px 0 10px rgba(255, 255, 255, 0.8);
+  }
+}

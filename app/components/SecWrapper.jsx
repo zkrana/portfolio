@@ -7,7 +7,6 @@ const Reviews = React.lazy(() => import("./reviews/Reviews"));
 const Education = React.lazy(() => import("./education/Educations"));
 const Portfolio = React.lazy(() => import("./portfolio/Portfolio"));
 const Blog = React.lazy(() => import("./blog/BLog"));
-const Footer = React.lazy(() => import("./footer/Footer"));
 
 export default function SecWrapper() {
   return (
@@ -54,11 +53,6 @@ export default function SecWrapper() {
         fallback={<div className=" animate-spin"> Blog is Loading... </div>}
       >
         <Blog />
-      </Suspense>
-      <Suspense
-        fallback={<div className=" animate-spin"> Footer is Loading... </div>}
-      >
-        <Footer />
       </Suspense>
     </div>
   );
