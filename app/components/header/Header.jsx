@@ -61,7 +61,7 @@ function MyNavigation({ closeMenu }) {
           </div>
         </div>
 
-        <ul className="relative max-w-sm mx-auto flex flex-col sm:gap-10 gap-4 justify-center items-center text-center sm:text-5xl txet-4xl font-bold uppercase text-white">
+        <ul className="relative max-w-sm mx-auto flex flex-col sm:gap-10 gap-4 justify-center items-center text-center sm:text-5xl text-4xl font-bold uppercase text-white">
           {menuItems.map((item, index) => (
             <li key={index} className="menu-item">
               <a href="/">{item}</a>
