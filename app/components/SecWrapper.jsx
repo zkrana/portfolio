@@ -6,7 +6,7 @@ const Pricing = React.lazy(() => import("./pricing/Pricing"));
 const Reviews = React.lazy(() => import("./reviews/Reviews"));
 const Education = React.lazy(() => import("./education/Educations"));
 const Portfolio = React.lazy(() => import("./portfolio/Portfolio"));
-const Blog = React.lazy(() => import("./blog/BLog"));
+const Blog = React.lazy(() => import("./blog/BlogHead"));
 
 export default function SecWrapper() {
   return (

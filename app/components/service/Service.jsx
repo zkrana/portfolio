@@ -5,7 +5,7 @@ export default function Service() {
   return (
     <div className="service">
       <Content
-        title="my services"
+        title="our services"
         description="From crafting stunning websites and intuitive user experiences to developing powerful apps, boosting online visibility, and ensuring reliable hosting and targeted advertising, we're your all-in-one solution."
       />
 
