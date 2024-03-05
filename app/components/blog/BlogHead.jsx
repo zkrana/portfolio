@@ -1,11 +1,13 @@
 import React from "react";
 import Content from "../Content";
 import Blog from "./BlogItem";
+import carLanding from "../../../public/react.jpg";
 
 function BlogHead() {
   const posts = [
     {
       id: 1,
+      img: carLanding,
       title: "Introduction to React",
       content: "React is a JavaScript library for building user interfaces.",
       author: "John Doe",
@@ -13,7 +15,8 @@ function BlogHead() {
     },
     {
       id: 2,
-      title: "State and Props in React",
+      img: carLanding,
+      title: "Noteworthy technology acquisitions 2021",
       content:
         "Understanding state and props is crucial for React development.",
       author: "Jane Smith",
@@ -21,6 +24,7 @@ function BlogHead() {
     },
     {
       id: 3,
+      img: carLanding,
       title: "State and Props in React",
       content:
         "Understanding state and props is crucial for React development.",
