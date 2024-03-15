@@ -5,7 +5,7 @@ import ToggleSkill from "./SkillToggle";
 
 export default function Hero() {
   return (
-    <div className="bg-[#1E293B] relative flex sm:flex-row flex-col justify-between items-center pt-32 sm:pl-[60px] pl-4 sm:pr-0 pr-4 overflow-hidden">
+    <div className="bg-[#1E293B] relative flex sm:flex-row flex-col justify-between items-center sm:pt-32 pt-14 sm:pl-[60px] pl-4 sm:pr-0 pr-4 overflow-hidden">
       <div className="max-w-6xl mx-auto flex justify-between gap-8 sm:gap-10 lg:gap-14 items-end w-full pb-16 sm:pb-0 relative">
         <div className="content lg:w-[calc(65%-28px)] sm:w-[calc(65%-20px)] w-full sm:pb-16 pb-0">
           <h1 className="her-t 2xl:text-6xl text-4xl font-bold text-text uppercase">
@@ -14,7 +14,7 @@ export default function Hero() {
 
           <ToggleSkill />
 
-          <p className="hero-desc text-base text-sub-head pt-4 max-w-lg ">
+          <p className="hero-desc text-base text-sub-head sm:pt-4 max-w-lg ">
             Welcome to Lyzerslab, where innovation meets expertise. We
             specialize in full-stack and app development, offer top-notch domain
             and hosting services, excel in WP customization, and pride ourselves

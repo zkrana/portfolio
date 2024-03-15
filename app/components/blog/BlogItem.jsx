@@ -18,7 +18,7 @@ function Blog({ posts }) {
               alt={post.title}
             />
           </div>
-          <p className="blog-meta text-sm text-slate-400 p-5 pt-3">
+          <p className="blog-meta text-sm text-slate-400 p-5 py-3">
             Author: {post.author} | Published on: {post.date}
           </p>
           <div className="blog-body relative h-[200px] flex flex-col p-5 pt-0">

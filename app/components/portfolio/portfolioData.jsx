@@ -1,4 +1,7 @@
+import ecomFrontend from "../../../public/ecommerce-frontend.png";
 import netlify from "../../../public/netlify.png";
+import shuvoit from "../../../public/shuvoit.png";
+import ecommerceDashboard from "../../../public/ecommerce-dashboard.jpg";
 import mozilla from "../../../public/mozilla.png";
 import carLanding from "../../../public/car-landing-page.png";
 import upspell from "../../../public/upspell.png";
@@ -17,11 +20,32 @@ import hostkori from "../../../public/hostkori.png";
 
 const portfolioData = [
   {
+    title: "Ecommerce Front-end",
+    image: ecomFrontend,
+    category: "Web Development",
+    description: "Ecommerce Front-end",
+    live: "https://ecommerce.glassfittingserviceinriyadh.com/front-end/",
+  },
+  {
+    title: "Ecommerce Dashboard",
+    image: ecommerceDashboard,
+    category: "Web Development",
+    description: "Ecommerce Admin Dashboard",
+    live: "https://ecommerce.glassfittingserviceinriyadh.com/",
+  },
+  {
     title: "Netlify Website",
     image: netlify,
     category: "Web Development",
     description: "Netlify Website cloning",
     live: "https://netlipyclone.netlify.app/",
+  },
+  {
+    title: "SHUVO IT",
+    image: shuvoit,
+    category: "Web Development",
+    description: "SEO Based IT company in Dhaka, Bangladesh.",
+    live: "https://shuvoit.com/",
   },
   {
     title: "Mozilla Login Page",
