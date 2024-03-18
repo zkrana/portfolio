@@ -1,10 +1,15 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Check } from "phosphor-react";
 import { Button, Modal, Typography } from "keep-react";
 import Footer from "../components/footer/Footer";
 function Contact() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -12,6 +17,7 @@ function Contact() {
     message: "",
   });
   const [isOpen, setIsOpen] = useState(false);
+  const [submittedFormData, setSubmittedFormData] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,10 +30,19 @@ function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Perform form validation here, e.g., check if required fields are filled
-    const isValid = formData.name && formData.email && formData.message;
+    const isValid =
+      formData.name && formData.phone && formData.email && formData.message;
 
     if (isValid) {
+      setSubmittedFormData({ ...formData });
       setIsOpen(true);
+      // Reset form data to empty values
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
     }
   };
 
@@ -160,14 +175,16 @@ function Contact() {
                 <h2 className="mb-4 text-2xl font-bold text-gray-100">
                   Ready to Get Started?
                 </h2>
-                <form id="contactForm" onSubmit={handleSubmit}>
-                  <div className="mb-6">
+                {isClient ? (
+                  <form id="contactForm" onSubmit={handleSubmit}>
                     <div className="mx-0 mb-1 sm:mb-4">
                       <div className="mx-0 mb-1 sm:mb-4">
                         <label
                           htmlFor="name"
                           className="pb-1 text-xs uppercase tracking-wider"
-                        ></label>
+                        >
+                          Name:
+                        </label>
                         <input
                           type="text"
                           id="name"
@@ -183,7 +200,9 @@ function Contact() {
                         <label
                           htmlFor="phone"
                           className="pb-1 text-xs uppercase tracking-wider"
-                        ></label>
+                        >
+                          Phone:
+                        </label>
                         <input
                           type="number"
                           id="phone"
@@ -199,7 +218,9 @@ function Contact() {
                         <label
                           htmlFor="email"
                           className="pb-1 text-xs uppercase tracking-wider"
-                        ></label>
+                        >
+                          Email:
+                        </label>
                         <input
                           type="email"
                           id="email"
@@ -211,37 +232,39 @@ function Contact() {
                           name="email"
                         />
                       </div>
+                      <div className="mx-0 mb-1 sm:mb-4">
+                        <label
+                          htmlFor="textarea"
+                          className="pb-1 text-xs uppercase tracking-wider"
+                        >
+                          Message:
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          cols="30"
+                          rows="5"
+                          placeholder="Write your message..."
+                          className="mb-2 w-full focus:outline-none rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md sm:mb-0"
+                        ></textarea>
+                      </div>
+                      <button
+                        type="submit"
+                        className="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0"
+                      >
+                        Send Message
+                      </button>
                     </div>
-                    <div className="mx-0 mb-1 sm:mb-4">
-                      <label
-                        htmlFor="textarea"
-                        className="pb-1 text-xs uppercase tracking-wider"
-                      ></label>
-                      <textarea
-                        id="textarea"
-                        name="textarea"
-                        value={formData.message}
-                        onChange={handleChange}
-                        cols="30"
-                        rows="5"
-                        placeholder="Write your message..."
-                        className="mb-2 w-full focus:outline-none rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 sm:mb-0"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <button
-                      type="submit"
-                      className="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0"
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </form>
+                  </form>
+                ) : (
+                  "Prerendered"
+                )}
 
                 <Modal isOpen={isOpen} onClose={closeModal}>
                   <Modal.Body className="flex flex-col items-center">
-                    <Modal.Icon className="h-20 w-20 bg-success-50 text-success-500">
+                    <Modal.Icon className="h-20 w-20 bg-gray-50 text-success-500">
                       <Check size={60} />
                     </Modal.Icon>
                     <Modal.Content className="my-4 text-center">
@@ -249,18 +272,35 @@ function Contact() {
                         variant="h3"
                         className="mb-2 text-body-1 font-bold text-metal-900"
                       >
-                        Success!
+                        Your Form Successfully Submitted
                       </Typography>
-                      <Typography
-                        variant="p"
-                        className="text-body-4 font-normal text-metal-600"
-                      >
-                        Your message has been sent successfully.
-                      </Typography>
+                      {submittedFormData && (
+                        <>
+                          <Typography
+                            variant="p"
+                            className="mb-2 text-body-4 font-normal text-metal-600"
+                          >
+                            Hello, {submittedFormData.name}!
+                          </Typography>
+                          {/* Additional content */}
+                          <Typography
+                            variant="p"
+                            className="text-body-4 font-normal text-metal-600"
+                          >
+                            One of our staff will communicate with you soon.
+                            Thanks for contacting Lyzerslab.
+                          </Typography>
+                        </>
+                      )}
                     </Modal.Content>
                     <Modal.Footer>
-                      <Button onClick={closeModal} size="sm" color="success">
-                        Close
+                      <Button
+                        className="border border-slate-600 text-slate-500"
+                        onClick={closeModal}
+                        size="sm"
+                        color="success"
+                      >
+                        Confirm
                       </Button>
                     </Modal.Footer>
                   </Modal.Body>
