@@ -1,22 +1,25 @@
-import ecomFrontend from "../../../public/ecommerce-frontend.png";
-import netlify from "../../../public/netlify.png";
-import shuvoit from "../../../public/shuvoit.png";
-import ecommerceDashboard from "../../../public/ecommerce-dashboard.jpg";
-import mozilla from "../../../public/mozilla.png";
-import carLanding from "../../../public/car-landing-page.png";
-import upspell from "../../../public/upspell.png";
-import upspellLife from "../../../public/life_at_UPSPELL_web.jpg";
-import adminDash from "../../../public/admin-dashboard.png";
-import adminLogin from "../../../public/admin-login.png";
-import comingpage1 from "../../../public/coming-soon-template-1.png";
-import comingpage2 from "../../../public/coming-soon-template-2.png";
-import doctorAppointment from "../../../public/doctor-aapointment.png";
-import doctorWebsite from "../../../public/doctor-website.png";
-import hostingerLogin from "../../../public/hostinger-login.png";
-import hostingerUserPanel from "../../../public/hostinger-user-panel.png";
-import launchly from "../../../public/launchly.png";
+import ecomFrontend from "../../../public/ecommerce-frontend.webp";
+import netlify from "../../../public/netlify.webp";
+import ecommerceDashboard from "../../../public/ecommerce-dashboard.webp";
+import mozilla from "../../../public/mozilla.webp";
+import carLanding from "../../../public/car-landing-page.webp";
+import upspell from "../../../public/upspell.webp";
+import upspellLife from "../../../public/life_at_UPSPELL_web.webp";
+import adminDash from "../../../public/admin-dashboard.webp";
+import adminLogin from "../../../public/admin-login.webp";
+import comingpage1 from "../../../public/coming-soon-template-1.webp";
+import comingpage2 from "../../../public/coming-soon-template-2.webp";
+import doctorAppointment from "../../../public/doctor-aapointment.webp";
+import doctorWebsite from "../../../public/doctor-website.webp";
+import hostingerLogin from "../../../public/hostinger-login.webp";
+import hostingerUserPanel from "../../../public/hostinger-user-panel.webp";
+import launchly from "../../../public/launchly.webp";
 //Wordpress
-import hostkori from "../../../public/hostkori.png";
+import hostkori from "../../../public/hostkori.webp";
+import heaven from "../../../public/heavenbd.shop.webp";
+import shuvoit from "../../../public/shuvoit.webp";
+import infinity from "../../../public/infinityhospitality.webp";
+import infinityTech from "../../../public/infinitytechnology.webp";
 
 const portfolioData = [
   {
@@ -41,9 +44,30 @@ const portfolioData = [
     live: "https://netlipyclone.netlify.app/",
   },
   {
+    title: "Infinity Hospitality",
+    image: infinity,
+    category: "WordPress Customization",
+    description: "Hospitality service provider in Australia.",
+    live: "https://infinityhospitality.com.au/",
+  },
+  {
+    title: "Ecommerce Website",
+    image: heaven,
+    category: "WordPress Customization",
+    description: "A Bangladeshi Ecommerce Website",
+    live: "https://heavenbd.shop/",
+  },
+  {
+    title: "Infinity Technology",
+    image: infinityTech,
+    category: "WordPress Customization",
+    description: "Hospitality service provider in Australia.",
+    live: "https://infinitytechnology.com.au/",
+  },
+  {
     title: "SHUVO IT",
     image: shuvoit,
-    category: "Web Development",
+    category: "WordPress Customization",
     description: "SEO Based IT company in Dhaka, Bangladesh.",
     live: "https://shuvoit.com/",
   },

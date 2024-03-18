@@ -48,7 +48,8 @@ function Contact() {
                 Get in Touch
               </h2>
               <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-200 ">
-                In hac habitasse platea dictumst
+                Feel free to reach out to us if you have any questions,
+                inquiries, or would like to discuss your project.
               </p>
             </div>
           </div>
@@ -56,9 +57,11 @@ function Contact() {
             <div className="grid md:grid-cols-2">
               <div className="h-full pr-6">
                 <p className="mt-3 mb-12 text-lg text-gray-300 dark:text-slate-400">
-                  Class aptent taciti sociosqu ad litora torquent per conubia
-                  nostra, per inceptos himenaeos. Duis nec ipsum orci. Ut
-                  scelerisque sagittis ante, ac tincidunt sem venenatis ut.
+                  Our team is here to assist you every step of the way. Whether
+                  you're looking to start a new project, need support with an
+                  existing one, or simply want to learn more about our services,
+                  we're just a message away. Don't hesitate to get in touch with
+                  us!
                 </p>
                 <ul className="mb-6 md:mb-0">
                   <li className="flex">
@@ -83,10 +86,8 @@ function Contact() {
                       <h3 className="mb-2 text-lg font-semibold leading-6 text-gray-300 dark:text-white">
                         Our Address
                       </h3>
-                      <p className="text-gray-200 ">
-                        1230 Maecenas Street Donec Road
-                      </p>
-                      <p className="text-gray-200 ">New York, EEUU</p>
+                      <p className="text-gray-200 ">Uttara, Joynal Market,</p>
+                      <p className="text-gray-200 ">Dhaka-1230, Bangladesh.</p>
                     </div>
                   </li>
                   <li className="flex">
@@ -112,10 +113,18 @@ function Contact() {
                       <h3 className="mb-2 text-lg font-semibold leading-6 text-gray-300">
                         Contact
                       </h3>
-                      <p className="text-gray-200 ">
-                        Mobile: +1 (123) 456-7890
-                      </p>
-                      <p className="text-gray-200 ">Mail: tailnext@gmail.com</p>
+                      <a
+                        href="tel:01824228717"
+                        className="text-gray-200 inline-block"
+                      >
+                        Mobile: +880-1824-228-717
+                      </a>
+                      <a
+                        href="mailto:support@lyzerslab.com"
+                        className="text-gray-200 block"
+                      >
+                        Mail: support@lyzerslab.com
+                      </a>
                     </div>
                   </li>
                   <li className="flex">
@@ -141,10 +150,7 @@ function Contact() {
                         Working hours
                       </h3>
                       <p className="text-gray-200">
-                        Monday - Friday: 08:00 - 17:00
-                      </p>
-                      <p className="text-gray-200">
-                        Saturday &amp; Sunday: 08:00 - 12:00
+                        Sunday - Thurseday: 09:00 AM - 08:00 PM
                       </p>
                     </div>
                   </li>
