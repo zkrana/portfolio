@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Check } from "phosphor-react";
 import { Button, Modal, Typography } from "keep-react";
 import Footer from "../components/footer/Footer";
-function contact() {
+function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -270,4 +270,4 @@ function contact() {
   );
 }
 
-export default contact;
+export default Contact;

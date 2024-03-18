@@ -35,8 +35,8 @@ export default function WhyChooseUS() {
               Customers may prioritize the reputation of the IT firm for
               delivering high-quality and reliable solutions. They might look
               for evidence of successful projects, testimonials from previous
-              clients, or industry certifications that attest to the firm's
-              reliability.
+              clients, or industry certifications that attest to the
+              firm&rsquo;s reliability.
             </p>
           </div>
 
