@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="footer sm:max-w-7xl w-[90%] mx-auto flex items-center justify-between mt-28 pt-7 pb-6 border-t border-[#28364d]">
+    <div className="footer sm:max-w-7xl w-[90%] mx-auto flex items-center justify-between mt-20 pt-7 pb-6 border-t border-[#28364d]">
       <p className=" text-sub-head text-center text-sm">
         {" "}
         Copyright &copy; 2024, <a href="/">Lyzerslab</a>{" "}

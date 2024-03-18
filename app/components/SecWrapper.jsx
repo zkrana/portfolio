@@ -4,7 +4,7 @@ const Hero = React.lazy(() => import("./hero/Hero"));
 const Service = React.lazy(() => import("./service/Service"));
 const Pricing = React.lazy(() => import("./pricing/Pricing"));
 const Reviews = React.lazy(() => import("./reviews/Reviews"));
-const Education = React.lazy(() => import("./education/Educations"));
+const Education = React.lazy(() => import("./education/WhyChooseUS"));
 const Portfolio = React.lazy(() => import("./portfolio/Portfolio"));
 const Blog = React.lazy(() => import("./blog/BlogHead"));
 const Newsletter = React.lazy(() => import("./Newsletter"));

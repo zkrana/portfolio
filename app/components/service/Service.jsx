@@ -229,8 +229,7 @@ export default function Service() {
             advertising{" "}
           </h4>
           <span className="s-desc block text-[15px] leading-[24px] text-sub-head pt-[22px] capitalize">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla
-            diam in ac dictum a urna viverra morbi.
+            Partner with us for results-driven advertising strategies.
           </span>
           <a
             href="#"
