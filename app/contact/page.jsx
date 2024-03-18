@@ -73,10 +73,10 @@ function Contact() {
               <div className="h-full pr-6">
                 <p className="mt-3 mb-12 text-lg text-gray-300 dark:text-slate-400">
                   Our team is here to assist you every step of the way. Whether
-                  you're looking to start a new project, need support with an
-                  existing one, or simply want to learn more about our services,
-                  we're just a message away. Don't hesitate to get in touch with
-                  us!
+                  you&apos;re looking to start a new project, need support with
+                  an existing one, or simply want to learn more about our
+                  services, we&apos;re just a message away. Don&apos;t hesitate
+                  to get in touch with us!
                 </p>
                 <ul className="mb-6 md:mb-0">
                   <li className="flex">
