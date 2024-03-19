@@ -43,8 +43,8 @@ function Header() {
 }
 
 function MyNavigation({ closeMenu }) {
-  const menuItems = ["Home", "Services", "Our Work", "Career", "Contact"];
-
+  const menuItems = ["Home", "Services", "Career", "Contact"];
+  const menuUrls = ["/", "#services", "/career", "/contact"];
   return (
     <div>
       <div
@@ -64,7 +64,7 @@ function MyNavigation({ closeMenu }) {
         <ul className="relative max-w-sm mx-auto flex flex-col sm:gap-10 gap-4 justify-center items-center text-center sm:text-5xl text-4xl font-bold uppercase text-white">
           {menuItems.map((item, index) => (
             <li key={index} className="menu-item">
-              <a href="/">{item}</a>
+              <a href={menuUrls[index]}>{item}</a>
             </li>
           ))}
         </ul>

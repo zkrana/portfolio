@@ -3,6 +3,23 @@ import React, { useState, useEffect } from "react";
 import { Check } from "phosphor-react";
 import { Button, Modal, Typography } from "keep-react";
 import Footer from "../components/footer/Footer";
+import Header from "../components/header/Header";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBars,
+  faClose,
+  faEnvelope,
+  faPhone,
+  faGit,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faYoutube,
+  faLinkedin,
+  faSkype,
+  faWhatsapp,
+} from "@fortawesome/free-brands-svg-icons";
 
 function Contact() {
   const [isClient, setIsClient] = useState(false);
@@ -88,10 +105,11 @@ function Contact() {
 
   return (
     <>
+      <Header />
       <section className="" id="contact">
         <a
           href="/"
-          className="logo-container hidden sm:flex justify-center font-bold text-4xl mt-8"
+          className="logo-container hidden sm:flex justify-center font-bold text-4xl mt-20 "
         >
           <div className="letter">L</div>
           <div className="letter">Y</div>
@@ -220,6 +238,59 @@ function Contact() {
                     </div>
                   </li>
                 </ul>
+
+                <div className="social flex sm:gap-3 gap-2 items-center mt-9 mb-12 sm:mb-0">
+                  <a
+                    href="https://github.com/zkrana"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      className="bg-black text-[#2b3137] transition-colors hover:text-white rounded shadow px-4 py-2 cursor-pointer"
+                    />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/zkrana"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faYoutube}
+                      className="bg-black rounded shadow text-[#cc181e] transition-colors hover:text-white px-4 py-2 cursor-pointer"
+                    />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/zkranadevs/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faLinkedin}
+                      className="bg-black rounded shadow text-[#0077b5] transition-colors hover:text-white px-4 py-2 cursor-pointer"
+                    />
+                  </a>
+                  <a
+                    href="skype:zkranao?chat"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faSkype}
+                      className="bg-black rounded shadow text-[#00aff0] transition-colors hover:text-white px-4 py-2 cursor-pointer"
+                    />
+                  </a>
+                  <a
+                    href="https://wa.me/01824228717"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faWhatsapp}
+                      className="bg-black rounded shadow text-[#075e54] transition-colors hover:text-white px-4 py-2 cursor-pointer"
+                    />
+                  </a>
+                </div>
               </div>
               <div className="card h-fit max-w-6xl sm:p-5 md:p-12" id="form">
                 <h2 className="mb-4 text-2xl font-bold text-gray-100">
