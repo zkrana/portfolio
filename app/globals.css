@@ -387,4 +387,124 @@
   #cwhite {
     @apply fill-slate-400 transition-colors hover:fill-white;
   }
+
+  .logo-container {
+    display: flex;
+  }
+
+  .letter {
+    position: relative;
+    animation: animateLogo 1.5s ease-in-out infinite alternate;
+    opacity: 0;
+    transform-origin: center;
+    font-size: 36px; /* Adjust font size as needed */
+    font-weight: bold; /* Adjust font weight as needed */
+    margin-right: 5px; /* Adjust spacing between letters as needed */
+  }
+
+  @keyframes animateLogo {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* Define smooth gradient colors for each letter */
+  .letter:nth-child(1)::before,
+  .letter:nth-child(2)::before,
+  .letter:nth-child(3)::before,
+  .letter:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #373030, #777777, #4a4a26);
+    z-index: -1;
+  }
+
+  .letter:nth-child(5)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      #ffff00,
+      #ffcc00,
+      #fee1c5
+    ); /* Yellow to Orange */
+    z-index: -1;
+  }
+
+  .letter:nth-child(6)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      #00ff00,
+      #497320,
+      #9c9c7e
+    ); /* Green to Yellow */
+    z-index: -1;
+  }
+
+  .letter:nth-child(7)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      #00ffff,
+      #00ccff,
+      #0080ff
+    ); /* Cyan to Light Blue */
+    z-index: -1;
+  }
+
+  .letter:nth-child(8)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      #ff00ff,
+      #ff80ff,
+      #ffccff
+    ); /* Magenta to Light Pink */
+    z-index: -1;
+  }
+
+  .letter:nth-child(9)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to right,
+      #0000ff,
+      #0080ff,
+      #00ffff
+    ); /* Blue to Cyan */
+    z-index: -1;
+  }
 }

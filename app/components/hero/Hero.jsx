@@ -20,6 +20,18 @@ export default function Hero() {
           />
         </div>
         <div className="mx-auto max-w-2xl py-20 sm:py-48 lg:py-56">
+          <div className="logo-container hidden sm:mb-8 sm:flex justify-center font-bold text-4xl mb-8">
+            <div className="letter">L</div>
+            <div className="letter">Y</div>
+            <div className="letter">Z</div>
+            <div className="letter">E</div>
+            <div className="letter">R</div>
+            <div className="letter">S</div>
+            <div className="letter">L</div>
+            <div className="letter">A</div>
+            <div className="letter">B</div>
+          </div>
+
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-200 ring-1 ring-gray-100/10 hover:ring-gray-900/20">
               Announcing our running projects.{" "}

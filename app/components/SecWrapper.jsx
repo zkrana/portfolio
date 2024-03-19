@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 
 const Hero = React.lazy(() => import("./hero/Hero"));
 const Service = React.lazy(() => import("./service/Service"));
-const Pricing = React.lazy(() => import("./pricing/Pricing"));
+const Pricing = React.lazy(() => import("./pricing/PricingPlan"));
 const Reviews = React.lazy(() => import("./reviews/Reviews"));
 const Education = React.lazy(() => import("./education/WhyChooseUS"));
 const Portfolio = React.lazy(() => import("./portfolio/Portfolio"));

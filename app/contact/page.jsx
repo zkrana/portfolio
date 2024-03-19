@@ -3,21 +3,32 @@ import React, { useState, useEffect } from "react";
 import { Check } from "phosphor-react";
 import { Button, Modal, Typography } from "keep-react";
 import Footer from "../components/footer/Footer";
+
 function Contact() {
   const [isClient, setIsClient] = useState(false);
-
   useEffect(() => {
     setIsClient(true);
   }, []);
 
+  const [submittedFormData, setSubmittedFormData] = useState(null);
+  const [service, setService] = useState("");
+  const [packageOption, setPackageOption] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
     message: "",
+    service: "",
+    packageOption: "",
   });
-  const [isOpen, setIsOpen] = useState(false);
-  const [submittedFormData, setSubmittedFormData] = useState(null);
+
+  const handleServiceChange = (event) => {
+    const selectedService = event.target.value;
+    setService(selectedService);
+    if (selectedService !== "web-development") {
+      setPackageOption("");
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,25 +38,50 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Perform form validation here, e.g., check if required fields are filled
-    const isValid =
-      formData.name && formData.phone && formData.email && formData.message;
 
-    if (isValid) {
-      setSubmittedFormData({ ...formData });
-      setIsOpen(true);
-      // Reset form data to empty values
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-      });
+    if (
+      formData.name.trim() &&
+      formData.phone.trim() &&
+      formData.email.trim() &&
+      formData.message.trim() &&
+      formData.service.trim() &&
+      formData.packageOption.trim()
+    ) {
+      try {
+        const response = await fetch("/api/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          console.log("Email sent successfully");
+          setSubmittedFormData(formData); // Save submitted form data
+          setFormData({
+            name: "",
+            phone: "",
+            email: "",
+            message: "",
+            service: "",
+            packageOption: "",
+          });
+          setIsOpen(true); // Open success modal
+        } else {
+          console.error("Failed to send email");
+        }
+      } catch (error) {
+        console.error("Failed to send email", error);
+      }
+    } else {
+      console.error("Please fill in all required fields");
     }
   };
 
+  const [isOpen, setIsOpen] = useState(false);
   const closeModal = () => {
     setIsOpen(false);
   };
@@ -53,6 +89,20 @@ function Contact() {
   return (
     <>
       <section className="" id="contact">
+        <a
+          href="/"
+          className="logo-container hidden sm:flex justify-center font-bold text-4xl mt-8"
+        >
+          <div className="letter">L</div>
+          <div className="letter">Y</div>
+          <div className="letter">Z</div>
+          <div className="letter">E</div>
+          <div className="letter">R</div>
+          <div className="letter">S</div>
+          <div className="letter">L</div>
+          <div className="letter">A</div>
+          <div className="letter">B</div>
+        </a>
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20 lg:pb-0">
           <div className="mb-4">
             <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
@@ -80,7 +130,7 @@ function Contact() {
                 </p>
                 <ul className="mb-6 md:mb-0">
                   <li className="flex">
-                    <div className="flex h-10 w-10 items-center justify-center rounded bg-slate-400 text-gray-50">
+                    <div className="flex h-10 w-10 items-center justify-center rounded bg-slate-700 text-gray-50">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -106,7 +156,7 @@ function Contact() {
                     </div>
                   </li>
                   <li className="flex">
-                    <div className="flex h-10 w-10 items-center justify-center rounded bg-slate-400 text-gray-50">
+                    <div className="flex h-10 w-10 items-center justify-center rounded bg-slate-700 text-gray-50">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -143,7 +193,7 @@ function Contact() {
                     </div>
                   </li>
                   <li className="flex">
-                    <div className="flex h-10 w-10 items-center justify-center rounded bg-slate-400 text-gray-50">
+                    <div className="flex h-10 w-10 items-center justify-center rounded bg-slate-700 text-gray-50">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -171,7 +221,7 @@ function Contact() {
                   </li>
                 </ul>
               </div>
-              <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
+              <div className="card h-fit max-w-6xl sm:p-5 md:p-12" id="form">
                 <h2 className="mb-4 text-2xl font-bold text-gray-100">
                   Ready to Get Started?
                 </h2>
@@ -179,12 +229,6 @@ function Contact() {
                   <form id="contactForm" onSubmit={handleSubmit}>
                     <div className="mx-0 mb-1 sm:mb-4">
                       <div className="mx-0 mb-1 sm:mb-4">
-                        <label
-                          htmlFor="name"
-                          className="pb-1 text-xs uppercase tracking-wider"
-                        >
-                          Name:
-                        </label>
                         <input
                           type="text"
                           id="name"
@@ -197,12 +241,6 @@ function Contact() {
                         />
                       </div>
                       <div className="mx-0 mb-1 sm:mb-4">
-                        <label
-                          htmlFor="phone"
-                          className="pb-1 text-xs uppercase tracking-wider"
-                        >
-                          Phone:
-                        </label>
                         <input
                           type="number"
                           id="phone"
@@ -215,12 +253,6 @@ function Contact() {
                         />
                       </div>
                       <div className="mx-0 mb-1 sm:mb-4">
-                        <label
-                          htmlFor="email"
-                          className="pb-1 text-xs uppercase tracking-wider"
-                        >
-                          Email:
-                        </label>
                         <input
                           type="email"
                           id="email"
@@ -232,13 +264,44 @@ function Contact() {
                           name="email"
                         />
                       </div>
-                      <div className="mx-0 mb-1 sm:mb-4">
-                        <label
-                          htmlFor="textarea"
-                          className="pb-1 text-xs uppercase tracking-wider"
+                      <div className="mx-0 mb-4">
+                        <select
+                          id="service"
+                          value={service}
+                          onChange={handleServiceChange}
+                          className="w-full focus:outline-none rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 bg-white"
                         >
-                          Message:
-                        </label>
+                          <option value="">Select a service</option>
+                          <option value="web-development">
+                            Web Development
+                          </option>
+                          <option value="ui-ux-design">UI/UX Design</option>
+                          <option value="app-development">
+                            App Development
+                          </option>
+                          <option value="domain-hosting">
+                            Domain & Hosting
+                          </option>
+                          <option value="seo">SEO</option>
+                          <option value="advertising">Advertising</option>
+                        </select>
+                      </div>
+                      {service === "web-development" && (
+                        <div className="mx-0 mb-4">
+                          <select
+                            id="package"
+                            value={packageOption}
+                            onChange={(e) => setPackageOption(e.target.value)}
+                            className="w-full focus:outline-none rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 bg-white"
+                          >
+                            <option value="">Select a package</option>
+                            <option value="basic">Basic</option>
+                            <option value="standard">Standard</option>
+                            <option value="custom">Custom</option>
+                          </select>
+                        </div>
+                      )}
+                      <div className="mx-0 mb-1 sm:mb-4">
                         <textarea
                           id="message"
                           name="message"

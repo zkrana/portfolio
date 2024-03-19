@@ -1,58 +1,88 @@
-// Reusable PricingPlan component
-function PricingPlan({ title, price, features, desc, ribon }) {
+import React from "react";
+import Content from "../Content";
+
+const PricingColumn = ({ title, price, features }) => {
   return (
-    <div className="pricing-plans basis[32%] flex-grow bg-[#1E293B] px-[31px] pt-[54px] pb-6 relative -z-[1]">
-      {ribon === "most popular" && (
-        <span className="bg-[#B0B0E6] text-[#1E293B] w-full h-8 flex justify-center items-center absolute top-0 left-0 right-0 text-[15px] font-semibold leading-[18px] capitalize ">
-          {ribon}
-        </span>
-      )}
-      <h3 className="plan-title text-text text-2xl font-semibold text-center capitalize mb-5">
-        {title}
-      </h3>
-      <h5 className="plan-price text-center mb-2">
-        {" "}
-        <span className=" text-text text-4xl font-[700]">${price}</span>{" "}
-        <span className=" text-sub-head">/month</span>
-      </h5>
-      <p className="plan-desc block mx-auto text-sub-head text-[15px] leading-5 max-w-[248px] text-center pb-[21px]">
-        {" "}
-        {desc}
-      </p>
-      <ul className="plan-features min-h-[240px] mt-4">
+    <div className="flex md:w-[calc(33.3333%-10.6666px)] sm:w-[calc(50%-10px)] w-full flex-col justify-between bg-slate-800 border border-gray-600 shadow-lg transition-colors hover:shadow-sm hover:shadow-white rounded-lg p-6">
+      <h2 className="text-2xl font-semibold text-gray-200">{title}</h2>
+      <div className="mt-4">
+        <span className="text-5xl font-bold text-gray-100">${price}</span>
+        <span className="text-gray-200"> / Once</span>
+      </div>
+      <ul className="mt-4 space-y-2">
         {features.map((feature, index) => (
-          <li
-            className="text-sub-head text-[15px] leading-5 mb-[17px] flex gap-2 "
-            key={index}
-          >
+          <li key={index} className="flex items-center">
             <svg
-              width="25"
-              height="24"
-              viewBox="0 0 25 24"
-              fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-green-500 mr-2"
+              viewBox="0 0 20 20"
+              fill="currentColor"
             >
               <path
-                d="M10.3688 15.172L19.8998 5.979L21.367 7.393L10.3688 18L3.77002 11.636L5.23618 10.222L10.3688 15.172Z"
-                fill="#B0B0E6"
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4 10a6 6 0 1112 0 6 6 0 01-12 0z"
+                clipRule="evenodd"
+              />
+              <path
+                fillRule="evenodd"
+                d="M5.172 10.172a.5.5 0 01.708 0L9 12.793l5.12-5.121a.5.5 0 01.707.707l-5.5 5.5a.5.5 0 01-.708 0l-3-3a.5.5 0 010-.707z"
+                clipRule="evenodd"
               />
             </svg>
-            {feature}
+            <span className="text-gray-400">{feature}</span>
           </li>
         ))}
       </ul>
-
-      {ribon === "most popular" ? (
-        <button className="price-btn block mx-auto z-10 !bg-[#B0B0E6] !text-[#1E293B]">
-          Choose Plan
-        </button>
-      ) : (
-        <button className="price-btn block mx-auto z-10 transition-colors hover:bg-[#B0B0E6] hover:text-[#fff]">
-          Choose Plan
-        </button>
-      )}
+      <a
+        href="/contact"
+        className="mt-6 bg-blue-500 text-center text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300"
+      >
+        Get Started
+      </a>
     </div>
   );
-}
+};
+
+const PricingPlan = () => {
+  return (
+    <>
+      <Content
+        title="Price plans"
+        description="Our pricing plans are tailored to fit your needs, offering scalable solutions for every budget"
+      />
+      <div className="flex flex-wrap md:max-w-5xl w-[90%] mx-auto gap-5 md:gap-4 justify-center mt-10">
+        <PricingColumn
+          title="Basic"
+          price="149.99"
+          features={[
+            "5 Pages",
+            "WordPress Theme Customization",
+            "Basic SEO Setup",
+            "Speed Optimization",
+          ]}
+        />
+        <PricingColumn
+          title="Standard"
+          price="249.99"
+          features={[
+            "10 Pages",
+            "eCommerce Functionality",
+            "Speed Optimization",
+            "Payment Gateway Integration",
+          ]}
+        />
+        <PricingColumn
+          title="Custom"
+          price="custom"
+          features={[
+            "Unlimited Pages",
+            "Advanced SEO Optimization",
+            "24/7 Support",
+          ]}
+        />
+      </div>
+    </>
+  );
+};
 
 export default PricingPlan;

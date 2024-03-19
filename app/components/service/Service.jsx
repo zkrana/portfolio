@@ -9,12 +9,11 @@ export default function Service() {
         description="From crafting stunning websites and intuitive user experiences to developing powerful apps, boosting online visibility, and ensuring reliable hosting and targeted advertising, we're your all-in-one solution."
       />
 
-      {/* Service Wrapper */}
       <div
         id="service"
         className="service-wrapper max-w-6xl mx-auto flex gap-5 justify-between flex-wrap mt-[50px] sm:px-0 px-4"
       >
-        <div className="service-item">
+        <div className="service-item rounded-md transition-colors hover:shadow-sm hover:shadow-white">
           <div className="mx-auto">
             <svg
               className="mx-auto"
@@ -52,7 +51,7 @@ export default function Service() {
           </span>
         </div>
 
-        <div className="service-item">
+        <div className="service-item rounded-md transition-colors hover:shadow-sm hover:shadow-white">
           <div className="mx-auto">
             <svg
               className="mx-auto"
@@ -109,7 +108,7 @@ export default function Service() {
           </span>
         </div>
 
-        <div className="service-item">
+        <div className="service-item rounded-md transition-colors hover:shadow-sm hover:shadow-white">
           <div className="mx-auto">
             <svg
               className="mx-auto"
@@ -147,7 +146,7 @@ export default function Service() {
           </span>
         </div>
 
-        <div className="service-item">
+        <div className="service-item rounded-md transition-colors hover:shadow-sm hover:shadow-white">
           <div className="mx-auto">
             <svg
               className="mx-auto"
@@ -185,7 +184,7 @@ export default function Service() {
           </span>
         </div>
 
-        <div className="service-item">
+        <div className="service-item rounded-md transition-colors hover:shadow-sm hover:shadow-white">
           <div className="mx-auto">
             <svg
               className="mx-auto"
@@ -223,7 +222,7 @@ export default function Service() {
           </span>
         </div>
 
-        <div className="service-item">
+        <div className="service-item rounded-md transition-colors hover:shadow-sm hover:shadow-white">
           <h4 className="s-title text-[18px] leading-[25px] font-[600] text-text capitalize ">
             {" "}
             advertising{" "}
@@ -232,7 +231,7 @@ export default function Service() {
             Partner with us for results-driven advertising strategies.
           </span>
           <a
-            href="#"
+            href="/contact"
             className="flex justify-center gap-1 text-bg text-[#FFB400] items-center text-[12px] leading-4 font-[700] mt-[30px] "
           >
             <span>ORDER NOW</span>

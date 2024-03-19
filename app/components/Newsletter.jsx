@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-import { Check } from "phosphor-react";
+import { Check, Activity } from "phosphor-react";
+
 import { Button, Modal, Typography } from "keep-react";
 
 function Newsletter() {
