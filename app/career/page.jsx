@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-
+import RootLayout, { getPageMetadata } from "../layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -19,10 +19,10 @@ import {
   faSkype,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-
 function Contact() {
+  const pageMetadata = getPageMetadata("career");
   return (
-    <>
+    <RootLayout pageName="Career || We care about your future.">
       <Header />
       <section className="py-24 bg-blueGray-50 overflow-hidden">
         <a
@@ -181,7 +181,7 @@ function Contact() {
       </section>
 
       <Footer />
-    </>
+    </RootLayout>
   );
 }
 

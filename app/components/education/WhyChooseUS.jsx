@@ -67,7 +67,7 @@ export default function WhyChooseUS() {
               Expertise and Innovation
             </h3>
             <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
-              we pride ourselves on our expertise and innovation. Our clients
+              We pride ourselves on our expertise and innovation. Our clients
               trust us for our track record of staying updated with the latest
               technologies and trends. We provide cutting-edge solutions that
               address their specific needs, showcasing our capability to
@@ -90,7 +90,7 @@ export default function WhyChooseUS() {
               Customer Service and Support
             </h3>
             <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-400">
-              we prioritize customer service and support. Our clients value our
+              We prioritize customer service and support. Our clients value our
               responsive and personalized approach throughout the project
               lifecycle. From initial consultation to ongoing maintenance and
               troubleshooting, we are committed to providing exceptional

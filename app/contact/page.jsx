@@ -4,7 +4,7 @@ import { Check } from "phosphor-react";
 import { Button, Modal, Typography } from "keep-react";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
-
+import RootLayout, { getPageMetadata } from "../layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -103,8 +103,9 @@ function Contact() {
     setIsOpen(false);
   };
 
+  const pageMetadata = getPageMetadata("Contact");
   return (
-    <>
+    <RootLayout pageName="Contact || We are here 24/7 for your support.">
       <Header />
       <section className="" id="contact">
         <a
@@ -446,7 +447,7 @@ function Contact() {
       </section>
 
       <Footer />
-    </>
+    </RootLayout>
   );
 }
 
