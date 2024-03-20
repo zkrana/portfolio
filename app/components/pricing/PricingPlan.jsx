@@ -7,7 +7,7 @@ const PricingColumn = ({ title, price, features }) => {
       <h2 className="text-2xl font-semibold text-gray-200">{title}</h2>
       <div className="mt-4">
         <span className="text-5xl font-bold text-gray-100">${price}</span>
-        <span className="text-gray-200"> / Once</span>
+        <span className="text-gray-200"> / Website</span>
       </div>
       <ul className="mt-4 space-y-2">
         {features.map((feature, index) => (
@@ -53,8 +53,9 @@ const PricingPlan = () => {
       <div className="flex flex-wrap md:max-w-5xl w-[90%] mx-auto gap-5 md:gap-4 justify-center mt-10">
         <PricingColumn
           title="Basic"
-          price="149.99"
+          price="109.99"
           features={[
+            "Premium Theme Installation",
             "5 Pages",
             "WordPress Theme Customization",
             "Basic SEO Setup",
@@ -63,8 +64,9 @@ const PricingPlan = () => {
         />
         <PricingColumn
           title="Standard"
-          price="249.99"
+          price="179.99"
           features={[
+            "Premium Theme Installation",
             "10 Pages",
             "eCommerce Functionality",
             "Speed Optimization",

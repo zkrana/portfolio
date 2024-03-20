@@ -47,7 +47,7 @@ export default function Service() {
           </h4>
           <span className="s-desc text-[15px] leading-[24px] text-sub-head mt-[15px] capitalize">
             {" "}
-            blog, e-commerce{" "}
+            Website & Web Appliation{" "}
           </span>
         </div>
 
@@ -104,7 +104,7 @@ export default function Service() {
           </h4>
           <span className="s-desc text-[15px] leading-[24px] text-sub-head mt-[15px] capitalize">
             {" "}
-            Mobile app and website design{" "}
+            App, SAAS & Web UI/UX Design{" "}
           </span>
         </div>
 
@@ -218,7 +218,7 @@ export default function Service() {
           </h4>
           <span className="s-desc text-[15px] leading-[24px] text-sub-head mt-[15px] capitalize">
             {" "}
-            rank your site{" "}
+            Best SEO Strategy{" "}
           </span>
         </div>
 

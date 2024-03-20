@@ -173,7 +173,7 @@ function Contact() {
                 href="tel:01824228717"
                 className="block text-center text-white"
               >
-                <p className="text-xl">Or Contact: Mobile: 01824228717</p>
+                <p className="text-xl">Or Contact: 01824228717</p>
               </a>
             </div>
           </div>

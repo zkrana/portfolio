@@ -43,8 +43,8 @@ function Header() {
 }
 
 function MyNavigation({ closeMenu }) {
-  const menuItems = ["Home", "Services", "Career", "Contact"];
-  const menuUrls = ["/", "#services", "/career", "/contact"];
+  const menuItems = ["Home", "Services", "Our Team", "Career", "Contact"];
+  const menuUrls = ["/", "/#services", "our-team", "/career", "/contact"];
   return (
     <div>
       <div

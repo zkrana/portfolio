@@ -40,7 +40,7 @@ function BlogHead() {
       <div>
         <Content
           title="Blog"
-          description="From crafting stunning websites and intuitive user experiences to developing powerful apps, boosting online visibility, and ensuring reliable hosting and targeted advertising, we're your all-in-one solution."
+          description="Whether you're a seasoned developer, a budding entrepreneur, or a curious enthusiast, our blog is your go-to resource for all things related to crafting compelling online experiences and maximizing your digital presence"
         />
       </div>
       <div className="mt-16">
