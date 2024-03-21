@@ -19,8 +19,7 @@ const metadata = {
   ogTitle: "Lyzerslab - Your End to End Digital Solutions",
   ogType: "website",
   ogUrl: "https://lyzerslab.com",
-  ogImage:
-    "https://lyzerslab.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ftechnology.eb09fe6d.jpg&w=640&q=75",
+  ogImage: "https://lyzerslab.com/lyzerslab-digital-agency.webp",
   ogDescription: "Discover a powerhouse of digital solutions at Lyzerslab.",
 };
 
