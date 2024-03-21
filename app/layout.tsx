@@ -12,7 +12,7 @@ const metadata = {
   description:
     "Discover a powerhouse of digital solutions at Lyzerslab. From full-stack and app development to top-tier domain hosting, WP customization, and impeccable UI/UX design, we're your one-stop destination for innovative and tailored online experiences. Together We Make Difference",
   keywords:
-    "Lyzerslab, digital solutions, full-stack development, app development, domain hosting, WP customization, UI/UX design",
+    "Lyzerslab digital agency, digital agency in Bangladesh, digital agency in Dhaka, digital solutions, full-stack development company, app development, domain hosting, Wordpress, UI/UX design, SAAS product",
   author: "Ziaul Kabir",
   robots: "index, follow",
   viewport: "width=device-width, initial-scale=1.0",
