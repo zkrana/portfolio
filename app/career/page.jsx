@@ -41,9 +41,9 @@ function Contact() {
         </a>
 
         <div className="container px-4 mx-auto">
-          <h2 className="mb-5 text-6xl md:text-8xl text-slate-200 xl:text-10xl text-center font-bold font-heading font-heading tracking-px-n leading-none">
+          <h1 className="mb-5 text-6xl md:text-8xl text-slate-200 xl:text-10xl text-center font-bold font-heading font-heading tracking-px-n leading-none">
             Featured Jobs
-          </h2>
+          </h1>
           <p className="mb-16 text-lg text-gray-400 text-center font-medium leading-normal md:max-w-lg mx-auto">
             As a leading organization in its field, LyzersLab provides exciting
             career opportunities for individuals looking to join a dynamic and

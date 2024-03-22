@@ -107,10 +107,10 @@ function Contact() {
   return (
     <RootLayout pageName="Contact || We are here 24/7 for your support.">
       <Header />
-      <section className="" id="contact">
+      <section className="py-24 bg-blueGray-50 overflow-hidden" id="contact">
         <a
           href="/"
-          className="logo-container hidden sm:flex justify-center font-bold text-4xl mt-20 "
+          className="logo-container hidden sm:flex justify-center font-bold text-4xl my-10"
         >
           <div className="letter">L</div>
           <div className="letter">Y</div>
@@ -122,22 +122,20 @@ function Contact() {
           <div className="letter">A</div>
           <div className="letter">B</div>
         </a>
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20 lg:pb-0">
-          <div className="mb-4">
-            <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-              <p className="text-base font-semibold uppercase tracking-wide text-gray-100">
-                Contact
-              </p>
-              <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-300 text-3xl sm:text-5xl">
-                Get in Touch
-              </h2>
-              <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-200 ">
-                Feel free to reach out to us if you have any questions,
-                inquiries, or would like to discuss your project.
-              </p>
-            </div>
+        <div className="sm:max-w-7xl w-[90%] mx-auto py-5">
+          <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
+            <p className="text-base font-semibold uppercase tracking-wide text-gray-100">
+              Contact
+            </p>
+            <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-300 text-3xl sm:text-5xl">
+              Get in Touch
+            </h2>
+            <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-200 ">
+              Feel free to reach out to us if you have any questions, inquiries,
+              or would like to discuss your project.
+            </p>
           </div>
-          <div className="flex items-stretch justify-center">
+          <div className="sm:max-w-7xl w-[90%] mx-auto flex items-stretch justify-center">
             <div className="grid md:grid-cols-2">
               <div className="h-full pr-6">
                 <p className="mt-3 mb-12 text-lg text-gray-300 dark:text-slate-400">
@@ -293,7 +291,7 @@ function Contact() {
                   </a>
                 </div>
               </div>
-              <div className="card h-fit max-w-6xl sm:p-5 md:p-12" id="form">
+              <div className="card h-fit max-w-6xl lg:p-5 md:p-12" id="form">
                 <h2 className="mb-4 text-2xl font-bold text-gray-100">
                   Ready to Get Started?
                 </h2>
@@ -387,7 +385,7 @@ function Contact() {
                       </div>
                       <button
                         type="submit"
-                        className="w-full bg-blue-800 text-white px-6 py-3 font-xl rounded-md sm:mb-0"
+                        className="bg-green-600 transition-colors hover:bg-[#6b7280] text-white hover:text-slate-900 font-bold py-2 px-4 rounded"
                       >
                         Send Message
                       </button>

@@ -19,7 +19,7 @@ export default function Hero() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-20 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-20 sm:py-32 2xl:py-56">
           <div className="logo-container hidden sm:mb-8 sm:flex justify-center font-bold text-4xl mb-8">
             <div className="letter">L</div>
             <div className="letter">Y</div>

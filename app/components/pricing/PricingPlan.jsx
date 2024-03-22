@@ -33,9 +33,10 @@ const PricingColumn = ({ title, price, features }) => {
           </li>
         ))}
       </ul>
+
       <a
         href="/contact"
-        className="mt-6 bg-blue-500 text-center text-white py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600 transition duration-300"
+        className="bg-[#22c55e] block mt-12 text-center transition-colors hover:bg-[#6b7280] text-black hover:text-slate-900 font-bold py-2 px-4 rounded"
       >
         Get Started
       </a>

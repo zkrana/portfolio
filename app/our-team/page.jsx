@@ -10,10 +10,10 @@ function page() {
   return (
     <RootLayout pageName="Our Team || We have bunch of dedicated ninja for your digital success.">
       <Header />
-      <section>
+      <section className="py-24 bg-blueGray-50 overflow-hidden">
         <a
           href="/"
-          className="logo-container hidden sm:flex justify-center font-bold text-4xl mt-20 "
+          className="logo-container hidden sm:flex justify-center font-bold text-4xl my-10"
         >
           <div className="letter">L</div>
           <div className="letter">Y</div>
@@ -26,27 +26,25 @@ function page() {
           <div className="letter">B</div>
         </a>
 
-        <div className="pt-8 pb-4 px-4 mx-auto max-w-screen-xl lg:pt-16 lg:pb-6 lg:px-6 ">
-          <div className="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-100">
-              Our Team
-            </h2>
-            <p className="font-light text-gray-300 lg:mb-16 sm:text-lg">
-              Meet the dedicated individuals behind our organization. Learn
-              about their backgrounds, expertise, and contributions.
-            </p>
-          </div>
-          <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2">
+        <div className="container px-4 mx-auto">
+          <h1 className="mb-5 text-6xl md:text-8xl text-slate-200 xl:text-10xl text-center font-bold font-heading font-heading tracking-px-n leading-none">
+            Our Team
+          </h1>
+          <p className="mb-16 text-lg text-gray-400 text-center font-medium leading-normal md:max-w-lg mx-auto">
+            Meet the dedicated individuals behind our organization. Learn about
+            their backgrounds, expertise, and contributions.
+          </p>
+          <div className="grid gap-8 mb-6 lg:mb-16 md:grid-cols-2 md:max-w-6xl mx-auto">
             <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-              <a href="#" className="sm:h-full">
+              <div className="t-hfit h-[212px]">
                 <Image
                   width={206}
                   height={256}
-                  className=" w-full sm:w-[206px] h-[205px] object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
+                  className=" w-full sm:w-[206px] h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
                   src="https://images.pexels.com/photos/3153203/pexels-photo-3153203.jpeg"
                   alt="Bonnie Avatar"
                 />
-              </a>
+              </div>
               <div className="p-5 sm:w-[calc(100%-95px)]">
                 <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Ziaul Kabir</a>
@@ -132,15 +130,15 @@ function page() {
             </div>
 
             <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-              <a href="#" className="sm:h-full">
+              <div className="t-hfit h-[212px]">
                 <Image
                   width={206}
                   height={256}
-                  className=" w-full sm:w-[206px] sm:h-[205px] object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
+                  className=" w-full sm:w-[206px] h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
                   src="https://images.pexels.com/photos/2505026/pexels-photo-2505026.jpeg"
                   alt="tareq"
                 />
-              </a>
+              </div>
               <div className="p-5 sm:w-[calc(100%-95px)]">
                 <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">Tareq Monjur</a>
@@ -227,15 +225,15 @@ function page() {
             </div>
 
             <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-              <a href="#" className="sm:h-full">
+              <div className="t-hfit h-[212px]">
                 <Image
                   width={206}
-                  height={206}
-                  className=" w-full sm:w-[206px] sm:h-[205px] object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
+                  height={256}
+                  className=" w-full sm:w-[206px] h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
                   src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg"
                   alt="Michael Avatar"
                 />
-              </a>
+              </div>
               <div className="p-5 sm:w-[calc(100%-95px)]">
                 <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">MD. Sabuj Ahmed</a>
@@ -321,15 +319,15 @@ function page() {
               </div>
             </div>
             <div className="items-center bg-gray-50 rounded-lg shadow sm:flex dark:bg-gray-800 dark:border-gray-700">
-              <a href="#" className="sm:h-full">
+              <div className="t-hfit h-[212px]">
                 <Image
                   width={206}
-                  height={206}
-                  className=" w-full sm:w-[206px] sm:h-[205px] object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
+                  height={256}
+                  className=" w-full sm:w-[206px] h-full object-cover rounded-lg sm:rounded-none sm:rounded-l-lg"
                   src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg"
                   alt="Sofia Avatar"
                 />
-              </a>
+              </div>
               <div className="p-5 sm:w-[calc(100%-95px)]">
                 <h3 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <a href="#">MD. Niyaz Mahmud</a>
@@ -418,7 +416,7 @@ function page() {
           <div className="featured-jobs mx-auto max-w-md bg-gray-800 rounded-lg p-6">
             <a href="/career" className="block text-center text-white">
               <p className="text-xl mb-4">Want to join with us</p>
-              <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+              <button className="bg-[#0f172a] transition-colors hover:bg-[#6b7280] text-slate-300 hover:text-slate-900 font-bold py-2 px-4 rounded">
                 Go back to Career
               </button>
             </a>
