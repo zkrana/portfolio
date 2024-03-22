@@ -35,8 +35,6 @@ function Contact() {
     phone: "",
     email: "",
     message: "",
-    service: "",
-    packageOption: "",
   });
 
   const handleServiceChange = (event) => {
@@ -46,9 +44,21 @@ function Contact() {
       setPackageOption("");
     }
   };
+  const handlePackageChange = (event) => {
+    const selectedPackage = event.target.value;
+    setPackageOption(selectedPackage);
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    if (name === "service") {
+      setService(value);
+      if (value !== "web-development") {
+        setPackageOption(""); // Reset packageOption if service changes
+      }
+    } else if (name === "packageOption") {
+      setPackageOption(value);
+    }
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
@@ -57,23 +67,29 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formData);
 
     if (
       formData.name.trim() &&
       formData.phone.trim() &&
       formData.email.trim() &&
       formData.message.trim() &&
-      formData.service.trim() &&
-      formData.packageOption.trim()
+      formData.service &&
+      formData.service.trim() && // Check if service is defined before trimming
+      formData.packageOption &&
+      formData.packageOption.trim() // Check if packageOption is defined before trimming
     ) {
       try {
-        const response = await fetch("/api/send-email", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
+        const response = await fetch(
+          "https://glassfittingserviceinriyadh.com/lyzerslab-email-backend/send-email.php",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          }
+        );
 
         if (response.ok) {
           console.log("Email sent successfully");
@@ -361,7 +377,7 @@ function Contact() {
                           <select
                             id="package"
                             value={packageOption}
-                            onChange={(e) => setPackageOption(e.target.value)}
+                            onChange={handlePackageChange} // Ensure this line is correct
                             className="w-full focus:outline-none rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md dark:text-gray-300 bg-white"
                           >
                             <option value="">Select a package</option>
