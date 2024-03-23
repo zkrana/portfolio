@@ -1,24 +1,8 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import RootLayout, { getPageMetadata } from "../layout";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faClose,
-  faEnvelope,
-  faPhone,
-  faGit,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faYoutube,
-  faLinkedin,
-  faSkype,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+
 function Contact() {
   const pageMetadata = getPageMetadata("career");
   return (
