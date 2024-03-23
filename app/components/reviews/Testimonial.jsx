@@ -1,4 +1,3 @@
-"use client";
 import PropTypes from "prop-types";
 import { useState } from "react";
 import Image from "next/image";
@@ -25,7 +24,12 @@ const Testimonial = ({ image, text, highlight, author, position, rating }) => {
       <p className="text-sub-head text-[15px] leading-5 mt-4">{text}</p>
 
       <div className="flex items-center gap-4 mt-[30px]">
-        <Image src={image} alt={author} width="100" height="100" />
+        {typeof image === "string" ? ( // Check if image is a string
+          <Image src={image} alt={author} width="100" height="100" />
+        ) : (
+          // If it's not a string, handle accordingly
+          <div>No image available</div>
+        )}
         <div>
           <p className="text-[18px] leading-6 text-text mb-[5px] font-semibold">
             {author}
@@ -40,7 +44,7 @@ const Testimonial = ({ image, text, highlight, author, position, rating }) => {
 };
 
 Testimonial.propTypes = {
-  image: PropTypes.string.isRequired,
+  image: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired, // Allow image prop to be either string or object
   text: PropTypes.string.isRequired,
   highlight: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,

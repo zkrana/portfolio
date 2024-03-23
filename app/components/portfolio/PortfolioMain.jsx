@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import PortfolioItem from "./PortfolioItem";
 import portfolioData from "./portfolioData";
-import { CSSTransition } from "react-transition-group";
 import PopupModal from "./PopupModal";
-import { title } from "process";
 
 const PortfolioMain = () => {
   const [category, setCategory] = useState("all");
   const [visibleItems, setVisibleItems] = useState(6);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const filterItems = (category) => {
     setCategory(category);
@@ -22,8 +21,6 @@ const PortfolioMain = () => {
     category === "all"
       ? portfolioData
       : portfolioData.filter((item) => item.category === category);
-
-  const [selectedItem, setSelectedItem] = useState(null);
 
   const openModal = (item) => {
     setSelectedItem(item);
@@ -68,17 +65,7 @@ const PortfolioMain = () => {
 
       <div className="portfolio-wrapper max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-8">
         {filteredItems.slice(0, visibleItems).map((item, index) => (
-          <div key={index} className="portfolio-items">
-            <CSSTransition
-              key={index}
-              in={true}
-              appear={true}
-              timeout={500}
-              classNames="fade"
-            >
-              <PortfolioItem key={index} item={item} openModal={openModal} />
-            </CSSTransition>
-          </div>
+          <PortfolioItem key={index} item={item} openModal={openModal} />
         ))}
       </div>
 

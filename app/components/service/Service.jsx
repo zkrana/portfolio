@@ -61,7 +61,7 @@ export default function Service() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_2_6449)">
+              <g clipPath="url(#clip0_2_6449)">
                 <path
                   d="M31.6094 49.3384C31.0591 49.3384 30.6133 49.7844 30.6133 50.3345C30.6133 50.8846 31.0591 51.3306 31.6094 51.3306H36.3906C36.9409 51.3306 37.3867 50.8846 37.3867 50.3345C37.3867 49.7844 36.9409 49.3384 36.3906 49.3384H31.6094Z"
                   fill="#FFB400"
@@ -242,7 +242,7 @@ export default function Service() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_2_649)">
+              <g clipPath="url(#clip0_2_649)">
                 <path
                   d="M10.1431 10.0002L7.78564 7.64352L8.96398 6.46436L12.4998 10.0002L8.96398 13.536L7.78564 12.3569L10.1431 10.0002Z"
                   fill="#FFB400"

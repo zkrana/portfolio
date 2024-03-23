@@ -2,9 +2,6 @@
 import React from "react";
 import Content from "../Content";
 import Testimonial from "./Testimonial";
-import reviewer1 from "../../../public/review-1.svg";
-import reviewer2 from "../../../public/review-2.svg";
-import reviewer3 from "../../../public/review-3.svg";
 
 // import Swiper core and required modules
 import { Pagination, Autoplay, A11y } from "swiper/modules";
@@ -18,7 +15,7 @@ import "swiper/css/pagination";
 export default function Reviews() {
   const testimonials = [
     {
-      image: reviewer1,
+      image: "/review-1.svg", // URL of the first image
       highlight: "Best Work",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       author: "James Gouse",
@@ -26,7 +23,7 @@ export default function Reviews() {
       rating: 5,
     },
     {
-      image: reviewer2,
+      image: "/review-2.svg", // URL of the second image
       highlight: "I will be back again",
       text: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
       author: "Jane Smith",
@@ -34,7 +31,7 @@ export default function Reviews() {
       rating: 5,
     },
     {
-      image: reviewer3,
+      image: "/review-3.svg", // URL of the third image
       highlight: "Amazing man",
       text: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
       author: "John Doe",
@@ -42,22 +39,13 @@ export default function Reviews() {
       rating: 4,
     },
     {
-      image: reviewer3,
+      image: "/review-1.svg", // URL of the third image
       highlight: "Amazing man",
       text: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
       author: "John Doe",
       position: "CEO, BaseBox",
       rating: 4,
     },
-    {
-      image: reviewer3,
-      highlight: "Amazing man",
-      text: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.",
-      author: "John Doe",
-      position: "CEO, BaseBox",
-      rating: 4,
-    },
-    // Add more testimonials as needed
   ];
 
   return (

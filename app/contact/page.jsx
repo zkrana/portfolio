@@ -37,74 +37,100 @@ function Contact() {
     message: "",
   });
 
+  const handlePackageChange = (event) => {
+    const selectedPackage = event.target.value;
+    setPackageOption(selectedPackage);
+    setFormData((prevState) => ({
+      ...prevState,
+      packageOption: selectedPackage,
+    }));
+  };
+
   const handleServiceChange = (event) => {
     const selectedService = event.target.value;
     setService(selectedService);
+    setFormData((prevState) => ({
+      ...prevState,
+      service: selectedService, // Update the service field in the form data
+    }));
     if (selectedService !== "web-development") {
       setPackageOption("");
     }
   };
-  const handlePackageChange = (event) => {
-    const selectedPackage = event.target.value;
-    setPackageOption(selectedPackage);
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     if (name === "service") {
+      // Update the service state separately
       setService(value);
+
+      // Reset the packageOption if the selected service is not web-development
       if (value !== "web-development") {
-        setPackageOption(""); // Reset packageOption if service changes
+        setPackageOption("");
       }
-    } else if (name === "packageOption") {
-      setPackageOption(value);
+    } else {
+      // For other fields, update the formData state as usual
+      setFormData((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }));
     }
-    setFormData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData);
 
+    // Check if all required fields are filled
     if (
       formData.name.trim() &&
       formData.phone.trim() &&
       formData.email.trim() &&
       formData.message.trim() &&
       formData.service &&
-      formData.service.trim() && // Check if service is defined before trimming
-      formData.packageOption &&
-      formData.packageOption.trim() // Check if packageOption is defined before trimming
+      formData.service.trim()
     ) {
       try {
-        const response = await fetch(
-          "https://glassfittingserviceinriyadh.com/lyzerslab-email-backend/send-email.php",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          }
-        );
+        let isValid = true; // Flag to indicate if form submission is valid
 
-        if (response.ok) {
-          console.log("Email sent successfully");
-          setSubmittedFormData(formData); // Save submitted form data
-          setFormData({
-            name: "",
-            phone: "",
-            email: "",
-            message: "",
-            service: "",
-            packageOption: "",
-          });
-          setIsOpen(true); // Open success modal
-        } else {
-          console.error("Failed to send email");
+        // Check if service is "web-development"
+        if (formData.service.trim() === "web-development") {
+          // If service is "web-development", check if a package option is selected
+          if (!formData.packageOption || !formData.packageOption.trim()) {
+            console.error("Please select a package");
+            isValid = false;
+          }
+        }
+
+        // Proceed with form submission if validation passes
+        if (isValid) {
+          const response = await fetch(
+            "https://ecommerce.glassfittingserviceinriyadh.com/lyzerslab-email-backend/send-email.php",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(formData),
+            }
+          );
+
+          if (response.ok) {
+            console.log("Email sent successfully");
+            setSubmittedFormData(formData); // Save submitted form data
+            setFormData({
+              name: "",
+              phone: "",
+              email: "",
+              message: "",
+              service: "",
+              packageOption: "",
+            });
+            setIsOpen(true); // Open success modal
+          } else {
+            console.error("Failed to send email");
+          }
         }
       } catch (error) {
         console.error("Failed to send email", error);

@@ -92,51 +92,31 @@ function MyNavigation({ closeMenu }) {
           </div>
 
           <div className="social flex sm:gap-3 gap-2 items-center">
-            <a
-              href="https://github.com/zkrana"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://github.com/zkrana" target="_blank">
               <FontAwesomeIcon
                 icon={faGithub}
                 className="bg-black text-[#2b3137] transition-colors hover:text-white rounded shadow px-4 py-2 cursor-pointer"
               />
             </a>
-            <a
-              href="https://www.youtube.com/zkrana"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.youtube.com/zkrana" target="_blank">
               <FontAwesomeIcon
                 icon={faYoutube}
                 className="bg-black rounded shadow text-[#cc181e] transition-colors hover:text-white px-4 py-2 cursor-pointer"
               />
             </a>
-            <a
-              href="https://www.linkedin.com/in/zkranadevs/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://www.linkedin.com/in/zkranadevs/" target="_blank">
               <FontAwesomeIcon
                 icon={faLinkedin}
                 className="bg-black rounded shadow text-[#0077b5] transition-colors hover:text-white px-4 py-2 cursor-pointer"
               />
             </a>
-            <a
-              href="skype:zkranao?chat"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="skype:zkranao?chat" target="_blank">
               <FontAwesomeIcon
                 icon={faSkype}
                 className="bg-black rounded shadow text-[#00aff0] transition-colors hover:text-white px-4 py-2 cursor-pointer"
               />
             </a>
-            <a
-              href="https://wa.me/01824228717"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://wa.me/01824228717" target="_blank">
               <FontAwesomeIcon
                 icon={faWhatsapp}
                 className="bg-black rounded shadow text-[#075e54] transition-colors hover:text-white px-4 py-2 cursor-pointer"
