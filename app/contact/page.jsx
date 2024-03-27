@@ -106,7 +106,7 @@ function Contact() {
         // Proceed with form submission if validation passes
         if (isValid) {
           const response = await fetch(
-            "https://ecommerce.glassfittingserviceinriyadh.com/lyzerslab-email-backend/send-email.php",
+            "https://lyzerslab.glassfittingserviceinriyadh.com/auth/backend-assets/formSubmit.php",
             {
               method: "POST",
               headers: {

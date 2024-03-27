@@ -34,7 +34,7 @@ function Newsletter() {
     if (isValid) {
       try {
         const response = await fetch(
-          "https://ecommerce.glassfittingserviceinriyadh.com/lyzerslab-email-backend/subscribe.php",
+          "https://lyzerslab.glassfittingserviceinriyadh.com/auth/backend-assets/subscribe.php",
           {
             method: "POST",
             headers: {
