@@ -148,7 +148,7 @@ function Newsletter() {
                             variant="p"
                             className="mb-2 text-body-4 font-normal text-metal-600"
                           >
-                            Hello, {submittedFormData.email || "Subscriber"}!
+                            Hello, {submittedFormData.email}!
                           </Typography>
                           <Typography
                             variant="p"
