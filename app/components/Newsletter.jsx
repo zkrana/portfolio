@@ -29,6 +29,8 @@ function Newsletter() {
     const isValid = formData.email;
 
     if (isValid) {
+      console.log("Form Data:", formData); // Add this line to log form data
+
       try {
         const response = await fetch(
           "https://lyzerslab.glassfittingserviceinriyadh.com/auth/backend-assets/subscribe.php",
