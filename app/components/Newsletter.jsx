@@ -142,6 +142,8 @@ function Newsletter() {
                     >
                       Successfully Subscribed.
                     </Typography>
+                    {console.log("submittedFormData:", submittedFormData)}{" "}
+                    {/* Add this line */}
                     {submittedFormData && (
                       <>
                         <Typography
