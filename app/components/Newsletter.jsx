@@ -1,8 +1,5 @@
-"use client";
-import React from "react";
-import { useState, useEffect } from "react";
-import { Check, Activity } from "phosphor-react";
-
+import React, { useState, useEffect } from "react";
+import { Check } from "phosphor-react";
 import { Button, Modal, Typography } from "keep-react";
 
 function Newsletter() {
@@ -65,6 +62,7 @@ function Newsletter() {
   const closeModal = () => {
     setIsOpen(false);
   };
+
   return (
     <div>
       <section className=" xl:max-w-6xl w-[90%] mx-auto bg-gray-900 mt-12">
@@ -148,13 +146,13 @@ function Newsletter() {
                             variant="p"
                             className="mb-2 text-body-4 font-normal text-metal-600"
                           >
-                            Hello, {submittedFormData.email}!
+                            Hello, {submittedFormData.email || "Subscriber"}!
                           </Typography>
                           <Typography
                             variant="p"
                             className="text-body-4 font-normal text-metal-600"
                           >
-                            Thanks for join with us.
+                            Thanks for joining us.
                           </Typography>
                         </>
                       )}
@@ -173,7 +171,7 @@ function Newsletter() {
                 </Modal>
               </>
             ) : (
-              "Prerendred"
+              "Prerendered"
             )}
           </div>
         </div>
