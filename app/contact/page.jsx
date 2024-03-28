@@ -492,3 +492,77 @@ function Contact() {
 }
 
 export default Contact;
+
+<main>
+  <div class="petirtoto">
+    <div class="toto-togel">
+      <br />
+      <a href="#" target="_blank" rel="noopener noreferrer nofollow">
+        <amp-img
+          height="59"
+          width="250"
+          alt="PKVGAMES"
+          src="https://s13.gifyu.com/images/SCE1E.png"
+        ></amp-img>
+      </a>
+      <hr />
+      <br />
+      <div class="situs-togel">
+        <a href="#" target="_blank" rel="noopener noreferrer nofollow">
+          <button class="btn2">
+            <strong>KLIK TOMBOL DIBAWAH</strong>
+            <div id="container-stars">
+              <div id="stars"></div>
+            </div>
+            <div id="glow">
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+          </button>
+        </a>
+        <br />
+        <br />
+        <a
+          href="https://l.linklyhq.com/l/1r2lJ"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          class="block"
+        >
+          LINK ALTERNATIF TERBARU
+        </a>
+
+        <a
+          href="https://l.linklyhq.com/l/1tuQS"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          class="block"
+        >
+          WHATSAPP OFFICIAL
+        </a>
+
+        <a
+          href="https://secure.livechatinc.com/customer/action/open_chat?license_id=13317408"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          class="block"
+        >
+          LIVECHAT OFFICIAL
+        </a>
+      </div>
+      <div>
+        <a href="#" target="_blank" rel="noopener noreferrer nofollow">
+          <amp-img
+            height="420"
+            width="350"
+            alt="DOMINOQQ"
+            src="https://s13.gifyu.com/images/SCEaV.gif"
+          ></amp-img>
+        </a>
+      </div>
+    </div>
+    <span style="text-align: center">
+      <b>REJEKIPOKER</b>
+    </span>
+    <br />
+  </div>
+</main>;

@@ -25,11 +25,11 @@ function Newsletter() {
   const handleForm = async (e) => {
     e.preventDefault();
 
-    // Perform form validation here, e.g., check if required fields are filled
-    const isValid = formData.email;
+    // Perform form validation here
+    const isValid = validateEmail(formData.email);
 
     if (isValid) {
-      console.log("Form Data:", formData); // Add this line to log form data
+      console.log("Form Data:", formData);
 
       try {
         const response = await fetch(
@@ -59,6 +59,12 @@ function Newsletter() {
     } else {
       console.error("Please enter a valid email address");
     }
+  };
+
+  // Function to validate email format
+  const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
   };
 
   const closeModal = () => {
