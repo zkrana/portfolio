@@ -6,7 +6,7 @@ import RootLayout, { getPageMetadata } from "../layout";
 function PrivacyPolicy() {
   const pageMetadata = getPageMetadata("Privacy Policy");
   return (
-    <RootLayout pageName="Privacy Policy || We care about your future.">
+    <RootLayout pageName="Privacy Policy || Your data is secure here.">
       <Header />
       <section className="py-24 max-w-7xl mx-auto text-white bg-blueGray-50 overflow-hidden">
         <a

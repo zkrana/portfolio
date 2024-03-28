@@ -43,8 +43,22 @@ function Header() {
 }
 
 function MyNavigation({ closeMenu }) {
-  const menuItems = ["Home", "Services", "Our Team", "Career", "Contact"];
-  const menuUrls = ["/", "/#services", "our-team", "/career", "/contact"];
+  const menuItems = [
+    "Home",
+    "Services",
+    "Our Team",
+    "Projects",
+    "Career",
+    "Contact",
+  ];
+  const menuUrls = [
+    "/",
+    "/#services",
+    "our-team",
+    "running-projects",
+    "/career",
+    "/contact",
+  ];
   return (
     <div>
       <div
@@ -61,7 +75,7 @@ function MyNavigation({ closeMenu }) {
           </div>
         </div>
 
-        <ul className="relative max-w-sm mx-auto flex flex-col sm:gap-10 gap-4 justify-center items-center text-center sm:text-5xl text-4xl font-bold uppercase text-white">
+        <ul className="relative max-w-sm mx-auto flex flex-col sm:gap-10 gap-4 justify-center items-center text-center sm:text-5xl text-2xl font-bold uppercase text-white">
           {menuItems.map((item, index) => (
             <li key={index} className="menu-item">
               <a href={menuUrls[index]}>{item}</a>
@@ -69,7 +83,7 @@ function MyNavigation({ closeMenu }) {
           ))}
         </ul>
 
-        <div className=" lg:max-w-4xl w-[90%] mx-auto flex justify-between lg:flex-row flex-col items-center gap-6 absolute sm:bottom-10 bottom-20">
+        <div className=" lg:max-w-4xl w-[90%] mx-auto flex justify-between lg:flex-row flex-col items-center sm:gap-6 gap-3 absolute bottom-10">
           <div className="flex sm:justify-center sm:items-center sm:gap-6 gap-3 text-white">
             <a
               href="mailto:zkranao@gmail.com"
